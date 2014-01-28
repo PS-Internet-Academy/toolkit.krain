@@ -209,7 +209,6 @@ input[type="checkbox"] {
     line-height:normal;
     padding-bottom: 5%;
 }
-
 .listing-summary #search-form .form-rows {
     margin-bottom: 0;
     margin-top: 1%;
@@ -606,9 +605,6 @@ div.width-full{
         width:65%;
         margin-left:-100%;
     }   
-    #portal-column-content.width-3\:4.position-1\:4{
-        width:72%;   
-    }
     div#portal-column-two.width-1\:4{
         width:35%;
     }
@@ -631,7 +627,7 @@ div.width-full{
         width: 100%;
         margin-top:0;
     }
-        #listing-info {
+    #listing-info {
         width: 40%;
     }
     .listing #listing-images {
