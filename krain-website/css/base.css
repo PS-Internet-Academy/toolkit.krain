@@ -209,6 +209,7 @@ input[type="checkbox"] {
     line-height:normal;
     padding-bottom: 5%;
 }
+
 .listing-summary #search-form .form-rows {
     margin-bottom: 0;
     margin-top: 1%;
@@ -492,7 +493,6 @@ div.width-full{
         width: 45%;
     }
     .listing #listing-images {
-        width: 50%;
         padding: 1%;
     }
     .listing #listing-images #galleria {
@@ -605,6 +605,9 @@ div.width-full{
         width:65%;
         margin-left:-100%;
     }   
+    #portal-column-content.width-3\:4.position-1\:4{
+        width:72%;   
+    }
     div#portal-column-two.width-1\:4{
         width:35%;
     }
@@ -628,10 +631,10 @@ div.width-full{
         margin-top:0;
     }
     #listing-info {
-        width: 40%;
+        margin-bottom:170px;
     }
     .listing #listing-images {
-        width: 55%;
+        position: absolute;
     }
     .galleria-stage {
         left: 0;
@@ -642,9 +645,6 @@ div.width-full{
     }
     .galleria-container img {
         left: 0 !important;
-        width: 100% !important;
-    }
-    .galleria-container {
         width: 100% !important;
     }
     select {
@@ -681,7 +681,7 @@ div.width-full{
 }
 @media (min-width: 768px) and (max-width: 979px) {
     #portal-columns,#header .row,.footer .row,.colophonWrapper{
-        width:680px;   
+        width:100%;   
     }
     #portal-column-content{
         width:100%; 
@@ -720,10 +720,10 @@ div.width-full{
         margin-top:0;
     }
     #listing-info {
-        width: 40%;
+        margin-bottom: 170px;
     }
     .listing #listing-images {
-        width: 55%;
+        position:absolute;
     }
     .galleria-stage {
         left: 0;
@@ -841,7 +841,6 @@ div.width-full{
     }
     .listing #listing-images {
         position: absolute;
-        width: 100%;
     }
     .galleria-stage {
         left: 0;
@@ -961,7 +960,6 @@ div.width-full{
     }
     .listing #listing-images {
         position: absolute;
-        width: 100%;
     }
     .galleria-stage {
         left: 0;
@@ -1081,7 +1079,6 @@ div.width-full{
     }
     .listing #listing-images {
         position: absolute;
-        width: 100%;
     }
     .galleria-stage {
         left: 0;

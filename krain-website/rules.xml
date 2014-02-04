@@ -13,15 +13,9 @@
       
     <rules css:if-content="#visual-portal-wrapper">
     
-    <drop
+    <!--<drop
         css:content=".carousel"
-    />
-    
-    <replace
-        css:theme="#fullscreen-slider"
-        css:content=".carousel"
-        method="raw"
-    />
+    />-->  
     
     <copy
         attributes="class"

@@ -462,7 +462,6 @@ table.listing a {
     border-bottom: none !important;
 }
 table.listing td.draggable {
-    text-shadow: White 1px 1px 1px;
     background: none transparent;
     border-bottom: 1px solid white;
     padding: 0.4em 0.4em 0 0.5em;
@@ -522,6 +521,7 @@ dl.portalMessage dt {
     line-height: 1.25em;
 }
 dl.portalMessage dd {
+    background:#ffffff;
     padding: 0.5em 0.5em;
     margin: 0;
     line-height: 1.25em;
@@ -908,9 +908,6 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
     border-radius: 0.5em;
     -webkit-border-radius: 0.5em;
     -moz-border-radius: 0.5em;
-    box-shadow: 0 0 1em 0 #888;
-    -moz-box-shadow: 0 0 0.5em 0 #888;
-    -webkit-box-shadow: 0 0 0.5em #888;
 }
 .comment h1,
 .comment h2,
@@ -957,7 +954,7 @@ input.searchPage {
     font-size:200% !important;
 }
 #rss-subscription {
-	float: left;
+    float: left;
 	line-height: 3em;
 }
 #search-results-bar .actionMenuContent {
@@ -1151,7 +1148,6 @@ dl.enableFormTabbing dd {
 }
 .field input[type="text"] {
    width: 20em;
-   background:#ffffff;
 }
 .field input[type="text"][size] {
    width: auto;
@@ -1387,16 +1383,14 @@ div.overlay div.close {
     overflow-y: auto;
 }
 .pb-ajax, .pb-image, .overlay iframe {
-    background: none transparent;
+    background: #fff;
     border: 1px solid #999;
     white-space: normal;
-    box-shadow: 0 0 3em 0.5em #666;
-    -moz-box-shadow: 0 0 3em 0.5em #666;
-    -webkit-box-shadow: 0 0 3em #666;
 }
 .pb-ajax > div {
     width: 92%;
     padding: 1em;
+    
 }
 .pb-ajax .documentActions {
     display:none

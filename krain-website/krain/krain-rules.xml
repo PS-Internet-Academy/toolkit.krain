@@ -5,5 +5,15 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xi="http://www.w3.org/2001/XInclude"
     >
-
+    
+    <append 
+        css:content-children="#viewlet-above-content > .carouselWrapper"
+        css:theme="#feature-listing-above-footer"
+        method="raw"
+    />
+    
+    <drop
+        css:content=".carouselWrapper"
+    />
+    
     </rules>
