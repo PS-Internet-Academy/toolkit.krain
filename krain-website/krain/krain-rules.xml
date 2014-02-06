@@ -5,6 +5,14 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xi="http://www.w3.org/2001/XInclude"
     >   
+
+    <drop css:content="#location-page-carousel"/>
+    
+    <append 
+        css:content="#location-page-carousel" 
+        css:theme="#fullscreen-slider"  
+        method="raw"
+    />
     
     <drop css:content=".titlecontact.toolkit"/>
     

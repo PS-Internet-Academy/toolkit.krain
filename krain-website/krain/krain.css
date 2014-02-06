@@ -234,6 +234,9 @@ ul#portal-languageselector li.currentLanguage{
 .state-private{
     color:#000000 !important;   
 }
+#fullscreen-slider{
+    margin:0 auto;   
+}
 #portal-globalnav ul.submenu li a{
     color: #000000 !important;
     background:#E3E3E3;
@@ -760,8 +763,27 @@ select, input[type="file"]{
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
 }
+#portal-column-two .portletWrapper{
+    padding:0;   
+}
+.portletCarouselWrapper .carousel {
+    height:auto;   
+}
+.portletCarouselWrapper{
+    padding: 5% 9% 9%; 
+    background-color: rgba(170, 169, 169, 0.5);
+}
+.portletCarouselWrapper .navi a{
+    display:inline-block;
+}
 @media (min-width: 1200px){
-    #portal-columns .row,#header .row,.footer .row,div.row,.toolkit.viewlet.plugin{
+    div#portal-column-two.width-1\:4{
+        width:30%;   
+    }
+    div.position-3\:4{
+        margin-left: -30%;   
+    }
+    #portal-columns .row,#header .row,.footer .row,div.row,.toolkit.viewlet.plugin,#fullscreen-slider{
         width:1080px;   
     }   
     #portal-column-content.width-full #listing-info {
@@ -829,7 +851,13 @@ select, input[type="file"]{
     }
 }
 @media (min-width: 980px) and (max-width:1199px){ 
-    #portal-columns.row,#header .row,.footer .row,div.row,#portal-globalnav,.toolkit.viewlet.plugin{
+    div#portal-column-two.width-1\:4{
+        width:30%;   
+    }
+    div.position-3\:4{
+        margin-left: -30%;   
+    }
+    #portal-columns.row,#header .row,.footer .row,div.row,#portal-globalnav,.toolkit.viewlet.plugin,#fullscreen-slider{
         width:870px;   
     }  
     #portal-globalnav{
@@ -904,7 +932,13 @@ select, input[type="file"]{
     }
 }
 @media (min-width: 768px) and (max-width: 979px) {
-    #portal-columns, #header .row, .footer .row, .colophonWrapper,.toolkit.viewlet.plugin{
+    div#portal-column-two.width-1\:4{
+        width:30%;   
+    }
+    div.position-3\:4{
+        margin-left: -30%;   
+    }
+    #portal-columns, #header .row, .footer .row, .colophonWrapper,.toolkit.viewlet.plugin,#fullscreen-slider{
         width:100%;   
     }
     .footer #doormat-container .column-0{
@@ -966,7 +1000,13 @@ select, input[type="file"]{
     }
 }
 @media (min-width: 600px) and (max-width: 767px){
-    .icons-on .row,.toolkit.viewlet.plugin{
+    div#portal-column-two.width-1\:4{
+        width:30%;   
+    }
+    div.position-3\:4{
+        margin-left: -30%;   
+    }
+    .icons-on .row,.toolkit.viewlet.plugin,#fullscreen-slider{
         width:100%;   
     }
     #portal-column-content,.footer .row{
@@ -1043,10 +1083,16 @@ select, input[type="file"]{
     }
 }
 @media (min-width: 481px) and (max-width: 599px){
+    div#portal-column-two.width-1\:4{
+        width:30%;   
+    }
+    div.position-3\:4{
+        margin-left: -30%;   
+    }
     .icons-on .row,#header .row,.footer .row{
         width:460;   
     }
-    #portal-column-content,.toolkit.viewlet.plugin{
+    #portal-column-content,.toolkit.viewlet.plugin,#fullscreen-slider{
         width: 100%; 
     }
     .footer #doormat-container .column-0{
@@ -1120,7 +1166,13 @@ select, input[type="file"]{
     }
 }
 @media (max-width: 480px){
-    .icons-on .row,#header .row,.footer .row,.toolkit.viewlet.plugin{
+    div#portal-column-two.width-1\:4{
+        width:30%;   
+    }
+    div.position-3\:4{
+        margin-left: -30%;   
+    }
+    .icons-on .row,#header .row,.footer .row,.toolkit.viewlet.plugin,#fullscreen-slider{
         width:100%;   
     }
     #portal-column-content{
