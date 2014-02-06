@@ -29,7 +29,7 @@
     />
     
     <replace
-        css:theme-children="div#main"
+        css:theme-children="div#main #content-columns"
         css:content="div#portal-columns"
     />
     

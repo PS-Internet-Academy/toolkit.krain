@@ -1,8 +1,8 @@
 #feature-listing-above-footer .scrollable .items .tileItem {
     float: left;
-    width:350px !important;
+    width:330px !important;
     position: relative;
-    margin-right: 15px
+    margin: 30px 15px 24px;
 }
 #feature-listing-above-footer div.navi{
     display:none;   
@@ -22,11 +22,17 @@ div.scrollable div.items div.itemPadding{
 #feature-listing-above-footer div.scrollable {
     position: relative;
     z-index: 1;
-    height: auto;
-    padding: 1.5% 0;
+    height: auto !important;
+    background:#fff;
+    border-radius: 10px;
+}
+#feature-listing-above-footer .carousel img{
+    height: 216px;
+    max-width: 100%;
+    width: 100%;   
 }
 #feature-listing-above-footer .carousel .prev{
-    left: 6%;  
+    left: 9%;  
     background-image: url("krain/krain-img/left-arrow.png");
 }
 #feature-listing-above-footer a.prev span,
@@ -35,7 +41,7 @@ div.scrollable div.items div.itemPadding{
 }
 #feature-listing-above-footer .carousel .next{
     left: auto;
-    right: 6%;
+    right: 9%;
     background-image: url("krain/krain-img/right-arrow.png");
 }
 #feature-listing-above-footer .carousel .next,#feature-listing-above-footer .carousel .prev{
@@ -63,6 +69,7 @@ div.scrollable div.items div.itemPadding{
     background-color:#b7b7b7;
     margin-top:7px;
     padding: 5px !important;
+    display: none;
 }
 .mls-listing .listing-info .location a,.mls-listing .listing-info .title a,.mls-listing .listing-info .bed_bath a{
     color:#000;
@@ -82,16 +89,17 @@ div.scrollable div.items div.itemPadding{
     font-weight:bold !important;
 }
 .mls-listing .price{
-    position: absolute;
-    background: transparent !important;
-    bottom: 0;
-    right: 0;
+    background:#FF0000;
+    color: #FFFFFF;
+    font-family: montaga;
+    font-size: 18px;
     padding-bottom: 4px !important;
     padding-right: 5px !important;
+    padding-top: 4px;
+    text-align: right;
 } 
 .mls-listing .price a{
-    color:#000 !important;
-    font-weight:bold !important;    
+    color:#fff !important; 
 }
 .lot_size {
 
@@ -102,11 +110,18 @@ div.scrollable div.items div.itemPadding{
 }
 #feature-listing-slider{
     width:100%;  
+    color:#fff;
+    font-family: 'Montaga', serif;
+    font-size:20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    line-height: 50px;
+    text-transform: uppercase;
 }
 #feature-listing-above-footer{
     background-color:transparent;  
     width:100%;
     position:relative;
+    margin-top: 2%;
 }
 #feature-listing-above-footer .lastCarousel,#feature-listing-slider div{  
         height: auto !important;
@@ -114,6 +129,7 @@ div.scrollable div.items div.itemPadding{
 @media (min-width: 1200px){
     #feature-listing-above-footer .lastCarousel,#feature-listing-slider div{
         width:1080px;   
+        margin: 0 auto;
     }  
 }
 @media (min-width: 980px) and (max-width:1199px){

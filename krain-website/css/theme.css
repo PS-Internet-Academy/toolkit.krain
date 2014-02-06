@@ -39,7 +39,7 @@ label .required {
     margin-top:20px;
 }
 #content-columns {
-    display:table;
+    display:block;
     vertical-align:top;
 }
 #left-column-content {

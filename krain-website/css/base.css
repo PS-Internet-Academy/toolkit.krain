@@ -183,8 +183,7 @@ body{
 #header{   
     margin:0 auto;
 }
-#header .row{
-    z-index:3;  
+#header .row{  
     margin:0 auto;
 }
 input[type="checkbox"] {
@@ -285,7 +284,6 @@ ul#portal-languageselector li.currentLanguage{
     padding:0;
     margin-top:0;
     border-right:0;
-    width:100%;
     height:auto;
     line-height:23px;
     margin:0;
@@ -313,7 +311,6 @@ ul#portal-languageselector li.currentLanguage{
 }
 #portal-globalnav li{
     display: table-cell;
-    max-width: 100px;
     padding: 4px 0;
     vertical-align: middle;
 }
@@ -454,6 +451,9 @@ ul.submenu{
 }
 ul.submenu li a{
     margin:0;  
+}
+ul.breadcrumb{
+    display:none;   
 }
 #tile-configure {
     z-index: 2000;

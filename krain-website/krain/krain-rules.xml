@@ -4,12 +4,33 @@
     xmlns:css="http://namespaces.plone.org/diazo/css"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xi="http://www.w3.org/2001/XInclude"
-    >
+    >   
+    
+    <drop css:content=".titlecontact.toolkit"/>
+    
+    <drop css:content="#portal-globalnav"/>
+
+    <append 
+        css:content="#portal-globalnav" 
+        css:theme="#fullbgnav"  
+        method="raw"
+    />
+    
+    <append 
+        css:content=".titlecontact.toolkit " 
+        css:theme="#fullbgnav"  
+        method="raw"
+    />
     
     <append 
         css:content-children="#viewlet-above-content > .carouselWrapper"
         css:theme="#feature-listing-above-footer"
         method="raw"
+    />
+    
+    <drop
+        css:theme="#feature-listing-slider"
+        css:if-not-content=".carouselWrapper"
     />
     
     <drop

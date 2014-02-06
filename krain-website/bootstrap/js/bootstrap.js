@@ -269,7 +269,7 @@
 
  /* CAROUSEL CLASS DEFINITION
   * ========================= */
-
+/*
   var Carousel = function (element, options) {
     this.$element = $(element)
     this.options = options
@@ -372,11 +372,11 @@
     }
 
   }
-
+*/
 
  /* CAROUSEL PLUGIN DEFINITION
   * ========================== */
-
+/*
   $.fn.carousel = function (option) {
     return this.each(function () {
       var $this = $(this)
@@ -395,10 +395,11 @@
   }
 
   $.fn.carousel.Constructor = Carousel
-
+*/
 
  /* CAROUSEL DATA-API
   * ================= */
+  /*
 
   $(function () {
     $('body').on('click.carousel.data-api', '[data-slide]', function ( e ) {
@@ -408,7 +409,7 @@
       $target.carousel(options)
       e.preventDefault()
     })
-  })
+  })*/
 
 }(window.jQuery);/* =============================================================
  * bootstrap-collapse.js v2.0.4
