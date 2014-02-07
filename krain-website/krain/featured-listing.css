@@ -13,6 +13,10 @@
     position: static;
     margin: 0 auto;  
 }
+.mls-listing .listing-image{
+    height: 216px;
+    overflow: hidden;    
+}
 div.scrollable div.items div.itemPadding{
     margin: 0;   
 }
@@ -27,7 +31,6 @@ div.scrollable div.items div.itemPadding{
     border-radius: 10px;
 }
 #feature-listing-above-footer .carousel img{
-    height: 216px;
     max-width: 100%;
     width: 100%;   
 }
