@@ -4,6 +4,10 @@ a{
 a:hover{ 
     color:#ff0000;
 }
+.width-9.position-0 .top-carousel .galleria-container img{
+    min-width: 648px !important;
+    min-height: 340px !important;
+}
 #portal-breadcrumbs {
     display: block;
     color:#000;
@@ -65,12 +69,14 @@ small{
     position: relative; 
 }
 .titlecontact.toolkit{
-    background:#000000;
+    background: none repeat scroll 0 0 #000000;
     color: #FFFFFF;
+    float: left;
     font-family: 'Montaga',serif;
     font-size: 22px;
     line-height: 48px;
     overflow: auto;
+    width: 100%;
 }
 .toolkit.viewlet.plugin{
     margin:0 auto;
@@ -442,6 +448,7 @@ dl.portlet dt a:link, dl.portlet dt a:visited, dl.portlet dt a:hover{
 }
 .portletCarouselWrapper .carousel {
     margin:0;
+    height:300px;
 }
 dl.portlet dt.portletHeader{
     font-size: 20px;
@@ -838,6 +845,7 @@ select, input[type="file"]{
 }
 .portletCarouselWrapper div.scrollable{
     height:100%;   
+    overflow-y: auto;
 }
 .portletCarouselWrapper{
     background-color: rgba(170, 169, 169, 0.5);
@@ -848,14 +856,13 @@ select, input[type="file"]{
 .portletCarouselWrapper a.prev{
     background-image:url('krain/krain-img/prev-portlets.png');
     background-repeat: no-repeat;
-    background-position: center center;
-    left: 0;
+    background-position: 0 46px;
     width:38px
 }
 .portletCarouselWrapper a.next{
     background-image:url('krain/krain-img/next-portlets.png');
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: 0 46px;
     width:38px
 }
 .portletCarouselWrapper a.prev span{
@@ -863,10 +870,6 @@ select, input[type="file"]{
 }
 .portletCarouselWrapper a.next span{
     display:none;
-}
-.portletCarouselWrapper .carousel img{
-    width:100%;   
-    height:133px;
 }
 .portletCarouselWrapper .carousel .scrollable .leadimagetile{
     position:relative;   
@@ -974,7 +977,16 @@ select, input[type="file"]{
 .top-carousel .galleria-thumbnails-container{
     bottom: 2px;   
     z-index: 3;
-    margin-bottom: 12px;
+}
+.top-carousel{
+    border: 14px solid rgba(255, 255, 255, .5);    
+}
+.bottom-carousel .galleria-container img{
+    min-width:1080px !important;
+    min-height:340px !important;
+}
+.top-carousel .galleria-stage{
+    height:304px !important; 
 }
 .top-carousel .galleria-info-text .galleria-info-description{
     background-color: rgba(0, 0, 0, 0.8);
@@ -985,7 +997,6 @@ select, input[type="file"]{
     font-weight: normal;
     line-height: 44px;
     padding: 0 0 0 2%;
-    margin-bottom: 13px;
 }
 .galleria-thumbnails {
     padding-right: 20px;
@@ -1148,7 +1159,8 @@ dl.portlet ul.navTree li a:hover{
     padding: 1em 0;
 }
 .portaltype-collective-cover-content .galleria-container {
-    height: 330px !important;
+    height: auto !important;
+    min-height: 200px !important;
 }
 .portaltype-collective-cover-content .cover-contentbody-tile img{
     border:none;   
@@ -1161,8 +1173,8 @@ dl.portlet ul.navTree li a:hover{
     height:150px !important;
 }
 .toolkit-slider .galleria-image img{
-    width:auto !important;
-    position:relative;
+    height: auto !important;
+    width: auto !important;
 }
 .switch_button{
     background-image:url('http://manage.kraincostarica.com/kraincostarica_com/en/image/button-map.png');
@@ -1235,18 +1247,19 @@ dl.portlet ul.navTree li a:hover{
 .toggler_default #form-widgets-price_min{
     float: right;
     height: 24px;
-    margin-right: 11px;
     margin-top: 23px;
     padding: 0;
-    width: 70%;
 }
+.site-de #content .listing-summary section dl dt,
+#content .listing-summary section dl dd {
+        font-size:11px;
+    }
 .toggler_default #form-widgets-price_max{
     float: right;
     height: 24px;
     margin-left: 3px;
     margin-top: 23px;
     padding: 0;
-    width: 70%;
 }
 .toggler_default h2 {
     font-size: 24px;
@@ -1269,7 +1282,7 @@ dl.portlet ul.navTree li a:hover{
 #content .toggler_default select#form-widgets-location_state {
     width: 90%;
     text-align: left;
-	margin-left: 5%
+    margin-left: 5%
 }
 #content .toggler_default select#form-widgets-listing_type {
     width: 90%;
@@ -1311,7 +1324,7 @@ dl.portlet ul.navTree li a:hover{
 #content .toggler_default select#form-widgets-baths-min,
 #content .toggler_default select#form-widgets-baths-max,
 #content .toggler_default #formfield-form-widgets-price_min input#form-widgets-price_min,
-#content .toggler_default #formfield-form-widgets-price_min input#form-widgets-price_max{
+#content .toggler_default #formfield-form-widgets-price_max input#form-widgets-price_max{
     -webkit-box-shadow: 0 0 1em #6e6e6e;
     -moz-box-shadow: 0 0 1em #6e6e6e;
     box-shadow: 0 0 1em #6e6e6e;
@@ -1324,19 +1337,22 @@ dl.portlet ul.navTree li a:hover{
 .width-15 #feature-listing-above-footer,.portaltype-document #feature-listing-above-footer{
     margin:0;   
 }
-.top-carousel .galleria-container img {
-    border: 14px solid rgba(255, 255, 255, .5);  
-    height: 302px !important;
-}
 @media (min-width: 1200px){
+    #portal-column-two .portletWrapper .portletNews {
+        width: 100%; 
+    }
+    .portletCarouselWrapper{
+        width: 100%;
+    }
+    .toggler_default #form-widgets-price_min{
+        margin-right: 11px;
+        width: 70%;
+    }
+    .toggler_default #form-widgets-price_max{
+        width: 70%;
+    }
     .bottom-carousel .galleria-info{
         bottom:30px;
-    }
-    .top-carousel .galleria-info-text .galleria-info-description{
-        margin:0 2% 13px;   
-    }
-    .top-carousel .galleria-container img {
-        width: 95.8% !important;
     }
     .toolkit-slider {
         height: 281px;
@@ -1466,7 +1482,7 @@ dl.portlet ul.navTree li a:hover{
         width:324px;  
     }
     .portletCarouselWrapper div.scrollable div.items div.itemPadding{
-        padding: 0 9%;
+        padding: 0 14%;
     }
     .formid-town-search div.formControls{
         float: left;
@@ -1474,16 +1490,26 @@ dl.portlet ul.navTree li a:hover{
         width: 45px; 
         margin-left:10px;
     }
+    .portletCarouselWrapper a.prev{
+        left: 6%;
+    }
 }
 @media (min-width: 980px) and (max-width:1199px){ 
+    #portal-column-two .portletWrapper .portletNews {
+        width: 100%; 
+    }
+    .portletCarouselWrapper{
+        width: 100%;
+    }
+    .toggler_default #form-widgets-price_min{
+        margin-right: 11px;
+        width: 70%;
+    }
+    .toggler_default #form-widgets-price_max{
+        width: 70%;
+    }
     .bottom-carousel .galleria-info{
         bottom:30px;
-    }
-    .top-carousel .galleria-info-text .galleria-info-description{
-        margin:0 2.6% 13px;   
-    }
-    .top-carousel .galleria-container img {
-        width: 95% !important;
     }
     .template-listing-detail .listing #listing-images .galleria-container{
         height:310px !important;   
@@ -1505,7 +1531,10 @@ dl.portlet ul.navTree li a:hover{
         top: 1%;
     }
     .portletCarouselWrapper a.next{
-        left: 88%;
+        left: 81%;
+    }
+    .portletCarouselWrapper a.prev{
+        left: 6%   
     }
     div#portal-column-two.width-1\:4{
         width:30%;   
@@ -1564,7 +1593,6 @@ dl.portlet ul.navTree li a:hover{
     }
     #portal-column-content #listing-info {
         width: 40%;
-        margin-bottom: 170px;
     }
     #portal-column-content.width-3\:4 .listing #listing-images{
         width: 50%;
@@ -1629,14 +1657,26 @@ dl.portlet ul.navTree li a:hover{
     }
 }
 @media (min-width: 768px) and (max-width: 979px) {
+    .portletAgentInformation .portletItem .agent_title{
+        text-align:center
+    }
+    #portal-column-two .portletWrapper .portletNews {
+        float: left;
+        width: 50%; 
+    }
+    .portletCarouselWrapper{
+        float: right;
+        width: 342px;
+    }
+    .toggler_default #form-widgets-price_min{
+        margin-right: 11px;
+        width: 70%;
+    }
+    .toggler_default #form-widgets-price_max{
+        width: 70%;
+    }
     .bottom-carousel .galleria-info{
         bottom:30px;
-    }
-    .top-carousel .galleria-info-text .galleria-info-description{
-        margin:0 2.4% 13px;   
-    }
-    .top-carousel .galleria-container img {
-        width: 95.2% !important;
     }
     .portletAgentInformation .portletItem h3, 
     .portletAgentInformation .portletItem .agency_name,
@@ -1674,6 +1714,9 @@ dl.portlet ul.navTree li a:hover{
     }
     .portletCarouselWrapper a.next{
         left: 96%;
+    }
+    .portletCarouselWrapper a.prev{
+        left: 1.5%;
     }
     div#portal-column-two.width-1\:4{
         width:100%;   
@@ -1743,7 +1786,7 @@ dl.portlet ul.navTree li a:hover{
     }
     #portal-column-content #listing-info {
         width: 38%;
-        margin-bottom: 170px;
+        margin-bottom: 30px;
     }
     #portal-column-content.width-3\:4 .listing #listing-images{
         padding: 1%;   
@@ -1786,7 +1829,7 @@ dl.portlet ul.navTree li a:hover{
         width:48%;   
     }
     .portletCarouselWrapper .scrollable .items .tileItem{
-        width:324px;  
+        width: 364px; 
     }
     .portletCarouselWrapper div.scrollable div.items div.itemPadding{
         padding: 0 9%;
@@ -1802,14 +1845,21 @@ dl.portlet ul.navTree li a:hover{
     }
 }
 @media (min-width: 600px) and (max-width: 767px){
+    #portal-column-two .portletWrapper .portletNews {
+        width: 100%; 
+    }
+    .portletCarouselWrapper{
+        width: 100%;
+    }
+    .toggler_default #form-widgets-price_min{
+        margin-right: 21px;
+        width: 71%;
+    }
+    .toggler_default #form-widgets-price_max{
+        width: 70%;
+    }
     .bottom-carousel .galleria-info{
         bottom:30px;
-    }
-    .top-carousel .galleria-info-text .galleria-info-description{
-        margin:0 1.9% 13px;   
-    }
-    .top-carousel .galleria-container img {
-        width:96.2% !important;
     }
     .portletAgentInformation .portletItem h3, 
     .portletAgentInformation .portletItem .agency_name,
@@ -1821,9 +1871,6 @@ dl.portlet ul.navTree li a:hover{
     }
     #portal-globalnav li{
         float:left;   
-    }
-    #portal-globalnav{
-        overflow:auto;   
     }
     .portletAgentInformation .portletItem .contact_details dt,
     .portletAgentInformation .portletItem .contact_details dd{
@@ -1856,6 +1903,9 @@ dl.portlet ul.navTree li a:hover{
     }
     .portletCarouselWrapper a.next{
         left: 94%;
+    }
+    .portletCarouselWrapper a.prev{
+        left: 3%;
     }
     div#portal-column-two.width-1\:4{
         width:100%;   
@@ -1981,9 +2031,7 @@ dl.portlet ul.navTree li a:hover{
     }
     .portletCarouselWrapper .scrollable .items .tileItem{
         width:324px;  
-    }
-    .portletCarouselWrapper div.scrollable div.items div.itemPadding{
-        padding: 0 9%;
+        margin:0 0.5% 0 0.06%
     }
     .formid-town-search div.formControls{
         float: left;
@@ -1996,19 +2044,26 @@ dl.portlet ul.navTree li a:hover{
     }
 }
 @media (min-width: 481px) and (max-width: 599px){
+    #portal-column-two .portletWrapper .portletNews {
+        width: 100%; 
+    }
+    .portletCarouselWrapper{
+        width: 100%;
+    }
+    .toggler_default #form-widgets-price_min{
+        margin-right: 16px;
+        width: 71%
+    }
+    .toggler_default #form-widgets-price_max{
+        width: 70%;
+    }
     .bottom-carousel .galleria-info{
         bottom:30px;
     }
-    .titlecontact.toolkit {
-        padding-right:20px;
-    }
-    .top-carousel .galleria-info-text .galleria-info-description{
-        margin:0 2.5% 13px;   
-    }
-    .top-carousel .galleria-container img {
-        width: 95% !important;
-        height:302px !important;
-    }
+    .titlecontact.toolkit h1,
+    .toolkit.viewlet.plugin .lang{
+        padding:20px; 
+    }   
     .portletAgentInformation .portletItem h3, 
     .portletAgentInformation .portletItem .agency_name,
     .portletAgentInformation .portletItem .contact_details{
@@ -2049,6 +2104,9 @@ dl.portlet ul.navTree li a:hover{
     .portletCarouselWrapper a.next{
         left: 93%;
     }
+    .portletCarouselWrapper a.prev{
+        left: 3%;
+    }
     div#portal-column-two.width-1\:4{
         width:100%;   
     }
@@ -2067,7 +2125,7 @@ dl.portlet ul.navTree li a:hover{
     div.width-1\:2{
         width: 41.5%   
     }
-    .icons-on .row,#header .row,.footer .row{
+    .icons-on .row,#header .row{
         width:460;   
     }
     #portal-column-content,.toolkit.viewlet.plugin,#fullscreen-slider,.titlecontact.toolkit h1,#portal-breadcrumbs{
@@ -2154,12 +2212,8 @@ dl.portlet ul.navTree li a:hover{
         top: 70px;  
     }
     #portal-globalnav li.selected:first-of-type,
-    #portal-globalnav li.plain:first-of-type{
-        margin-left:207px;  
+    #portal-globalnav li.plain:first-of-type{  
         float:left;
-    }
-    #portal-globalnav{
-        overflow:auto;   
     }
     #portal-globalnav li{
         float:left;   
@@ -2193,9 +2247,7 @@ dl.portlet ul.navTree li a:hover{
     }
     .portletCarouselWrapper .scrollable .items .tileItem{
         width:324px;  
-    }
-    .portletCarouselWrapper div.scrollable div.items div.itemPadding{
-        padding: 0 9%;
+        margin: 0 0.02% 0 0.04%;
     }
     .formid-town-search div.formControls{
         float: left;
@@ -2206,19 +2258,32 @@ dl.portlet ul.navTree li a:hover{
     .toolkit-slider{
         height:245px; 
     }
+    #portal-logo{
+        display:none;   
+    }
 }
 @media (max-width: 480px){
+    .site-de .form-row-listing-type .field span.option {
+        width: 100%;
+    }
+    #portal-column-two .portletWrapper .portletNews {
+        width: 100%; 
+    }
+    .portletCarouselWrapper{
+        width: 100%;
+    }
+    .toggler_default #form-widgets-price_min{
+        margin-right: 11px;
+        width: 70%;
+    }
+    .toggler_default #form-widgets-price_max{
+        width: 70%;
+    }
     .bottom-carousel .galleria-info{
         bottom:70px;
     }
     .galleria-container img{
         height:100% !important;
-    }
-    .top-carousel .galleria-info-text .galleria-info-description{
-        margin:0 3.4% 13px;   
-    }
-    .top-carousel .galleria-container img {
-        width: 93% !important;
     }
     .portletAgentInformation .portletItem h3, 
     .portletAgentInformation .portletItem .agency_name,
@@ -2260,6 +2325,9 @@ dl.portlet ul.navTree li a:hover{
     .portletCarouselWrapper a.next{
         left: 93%;
     }
+    .portletCarouselWrapper a.prev{
+        left: 1.5%;
+    }
     div#portal-column-two.width-1\:4{
         width:100%;   
     }
@@ -2361,16 +2429,12 @@ dl.portlet ul.navTree li a:hover{
         width:100%;   
     }
     #g-iconbar{
-        left: 50%;  
+        left: 40%;  
         top: 70px;  
     }
     #portal-globalnav li.selected:first-of-type,
-    #portal-globalnav li.plain:first-of-type{
-        margin-left:207px;  
+    #portal-globalnav li.plain:first-of-type{ 
         float:left;
-    }
-    #portal-globalnav{
-        overflow:auto;   
     }
     #portal-globalnav li{
         float:left;   
@@ -2397,16 +2461,14 @@ dl.portlet ul.navTree li a:hover{
         width: 100%;   
     }
     .titlecontact.toolkit h1{
-        width:100%;   
+        width:97%;   
     }
     .titlecontact.toolkit .toolkit.viewlet.plugin{
-        width:100%;   
+        width:97%;  
     }
     .portletCarouselWrapper .scrollable .items .tileItem{
-        width:324px;  
-    }
-    .portletCarouselWrapper div.scrollable div.items div.itemPadding{
-        padding: 0 9%;
+        width:315px; 
+        margin: 0 0.01% 0 0.02%;
     }
     .formid-town-search div.formControls{
         float: left;
@@ -2416,5 +2478,11 @@ dl.portlet ul.navTree li a:hover{
     }
     .toolkit-slider{
         height:245px; 
+    }
+    #portal-logo{
+        display:none;   
+    }
+    .site-de .form-row-listing-type .field span.option {
+        width: 100%;
     }
 }
