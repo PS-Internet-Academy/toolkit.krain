@@ -17,12 +17,6 @@
     <drop css:content=".titlecontact.toolkit"/>
     
     <drop css:content="#portal-globalnav"/>
-
-    <append 
-        css:content="#portal-globalnav" 
-        css:theme="#fullbgnav"  
-        method="raw"
-    />
     
     <append 
         css:content=".titlecontact.toolkit " 

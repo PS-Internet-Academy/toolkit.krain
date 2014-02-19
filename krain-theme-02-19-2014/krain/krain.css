@@ -4,6 +4,52 @@ a{
 a:hover{ 
     color:#ff0000;
 }
+.navbar .nav-collapse .dropdown-menu{
+    display:none;   
+}
+#content-columns .portlet-print-viewlet {
+    background-image: url("http://localhost:8080/krain/en/pics/Print-listing.png");
+    background-repeat: no-repeat;
+    width: 88%;
+    height: 28px;
+    box-shadow: 1px 1px 10px 1px #888888;
+    border-radius: 9px;
+    margin-left: 5%;
+    margin-top: 10px;
+}
+#content-columns .portlet-print-viewlet a {
+    font-family: roboto;
+    font-size: 16px;
+    color: #888888;
+    font-weight: bold;
+    line-height: 25px;
+    margin-left: 70px;
+}
+#viewlet-social-like {
+    width: 100%;
+    display: inline-block;
+}
+#viewlet-social-like .sociallike-network-facebook {
+    display: none;
+    float: left;
+    width: 50%;
+}
+#viewlet-social-like .sociallike-network-gplus {
+    float: left;
+    width: 50%;
+}
+#viewlet-social-like .sociallike-network-linkedin {
+    float: left;
+    width: 50%;
+}
+#viewlet-social-like .sociallike-network-pinterest {
+    float: left;
+    width: 50%;
+}
+#viewlet-social-like .sociallike-network-twitter {
+    float: left;
+    width: 50%;
+}
 .width-9.position-0 .top-carousel .galleria-container img{
     min-width: 648px !important;
     min-height: 340px !important;
@@ -117,11 +163,8 @@ ul.submenu{
 .portaltype-collective-cover-content #content{
     margin:0;   
 }
-#portal-globalnav{
+#nav{
     font-family: 'PT Serif Caption', serif;   
-}
-#portal-globalnav li#portaltab-news,#portal-globalnav li#portaltab-events{
-    display:none;   
 }
 ul#portal-languageselector{
     background:none transparent;
@@ -275,17 +318,17 @@ ul#portal-languageselector li.currentLanguage{
 #fullscreen-slider{
     margin:0 auto;   
 }
-#portal-globalnav ul.submenu li a{
+#nav ul.submenu li a{
     color: #000000 !important;
     background:#E3E3E3;
     font-family: 'Montaga', serif;
     font-size:12px;
 }
-#portal-globalnav ul.submenu li a:hover{
+#nav ul.submenu li a:hover{
     color: #000000;
     background:#E3E3E3;
 }
-#portal-globalnav ul.submenu li{
+#nav ul.submenu li{
     border-bottom: 1px solid #C1C1C1;
 }
 #portal-personaltools dd a{ 
@@ -324,6 +367,12 @@ ul#portal-languageselector li.currentLanguage{
     font-size:19px;  
     font-family: 'Montaga', serif;
 }
+#nav:after {
+    clear: both;
+    content: "";
+    display: block;
+    visibility: hidden;
+}
 #header{   
     background:#000000;
     padding-bottom: 77px;
@@ -360,21 +409,49 @@ ul#portal-languageselector li.currentLanguage{
     font-family: 'PT Serif Caption', serif;
     font-size:16px;
 }
-#portal-globalnav{
+#nav{
     background:#3f3e3d;
 }
-#portal-globalnav .selected,#portal-globalnav li.selected a{
+#nav .active,#nav li.active a{
     background:#ff0000;
     position: relative;
     line-height: 30px;
     margin:0;
 }
+.navbar .dropdown-menu:before{
+    border:none;   
+}
+.navbar .dropdown-menu:after{
+    border:none;   
+}
+.navbar .dropdown-menu{
+    padding:0; 
+    margin:0;
+}
+#nav li.dropdown ul.dropdown-menu li a{
+    background: #e8e7e7;
+    border:none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    white-space: normal;   
+    border-bottom:1px solid #cacaca;
+    height:auto;
+    line-height:22px;
+    padding:0 5%;
+}
+.caret{
+    display:none; 
+}
+#nav li.dropdown ul.dropdown-menu, #nav li.dropdown ul.dropdown-menu li, #nav li.dropdown ul.dropdown-menu li a{
+    width:95%;   
+}
 .form-row-tabbed .formTab a span{
     color:#fff; 
 }
-#portal-globalnav li.plain a,
-#portal-globalnav li.selected a,
-#portal-globalnav li.selected a:hover{
+#nav li a,
+#nav li.active a,
+#nav li.active a:hover{
     background: none repeat scroll 0 0 #3F3E3D;
     border-right: 1px solid #FFFFFF;
     color: #FFFFFF;
@@ -382,10 +459,10 @@ ul#portal-languageselector li.currentLanguage{
     min-width: 70px;
     padding: 0 4px;
 }
-#portal-globalnav li.selected a{
+#nav li.active a{
     background:#ff0000;
 }
-#portal-globalnav li.selected a:hover{
+#nav li.active a:hover{
     background:#ff0000;
 }
 #header .row{
@@ -601,7 +678,6 @@ table.listing tr th{
 #content .content_box  p a{
     color: #000000 !important;
     font-size: 18px;
-    text-shadow: 2px 0 0 #FFFFFF, -2px 0 0 #FFFFFF, 0 2px 0 #FFFFFF, 0 -2px 0 #FFFFFF, 1px 1px #FFFFFF, -1px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 3px 5px 3px #000000;
 }
 #content p, #content table, #content dl, dl.portlet p, dl.portlet{  
     font-size:13px;
@@ -1091,9 +1167,6 @@ select, input[type="file"]{
 .section-latest-listings.template-listing-detail .galleria-thumbnails-container{
     bottom:0;
 }
-.portletStaticText img {
-    width:100% 
-}
 #content-core  p img{
     border:none;
 }
@@ -1337,7 +1410,20 @@ dl.portlet ul.navTree li a:hover{
 .width-15 #feature-listing-above-footer,.portaltype-document #feature-listing-above-footer{
     margin:0;   
 }
+#fullbgnav .container{
+    margin:0 auto; 
+    position:static;
+}
+.navbar-inner{
+    background:none;   
+}
 @media (min-width: 1200px){
+    #content .documentDescription{
+        width: 47%;
+    }
+    .portletStaticText img {
+        width:100% 
+    }
     #portal-column-two .portletWrapper .portletNews {
         width: 100%; 
     }
@@ -1390,7 +1476,7 @@ dl.portlet ul.navTree li a:hover{
     #content .width-5.position-5{
         height: 448px;  
     }
-    #portal-columns .row,#header .row,.footer .row,div.row,#fullscreen-slider,.toolkit.viewlet.plugin,#portal-breadcrumbs{
+    #portal-columns .row,#header .row,.footer .row,div.row,#fullscreen-slider,.toolkit.viewlet.plugin,#portal-breadcrumbs,#fullbgnav .container{
         width:1080px;   
     }   
     .titlecontact.toolkit h1{
@@ -1434,12 +1520,11 @@ dl.portlet ul.navTree li a:hover{
     .portletQuickSearch #formfield-form-widgets-price_max{
         width: 40%;
     }
-    #portal-globalnav{
+    #navibar{
         margin: 0 auto;
         width: 1080px;
     }
-    #portal-globalnav li.selected:first-of-type,
-    #portal-globalnav li.plain:first-of-type{
+    #nav{
         margin-left:207px;   
         float: left;
     }
@@ -1495,6 +1580,12 @@ dl.portlet ul.navTree li a:hover{
     }
 }
 @media (min-width: 980px) and (max-width:1199px){ 
+    #content .documentDescription{
+        width: 100%;
+    }
+    .portletStaticText img {
+        width:100% 
+    }
     #portal-column-two .portletWrapper .portletNews {
         width: 100%; 
     }
@@ -1550,12 +1641,13 @@ dl.portlet ul.navTree li a:hover{
         width:33%;
         height:100%;
     }
-    #portal-columns.row,#header .row,.footer .row,div.row,#portal-globalnav,.toolkit.viewlet.plugin,#fullscreen-slider,
+    #portal-columns.row,#header .row,.footer .row,div.row,#nav,.toolkit.viewlet.plugin,#fullscreen-slider,
     .titlecontact.toolkit h1,
-    #portal-breadcrumbs{
+    #portal-breadcrumbs,
+    #fullbgnav .container{
         width:950px;   
     }  
-    #portal-globalnav{
+    #nav{
         margin:0 auto;   
     }
     #portal-column-content.width-3\:4.position-1\:4{
@@ -1618,8 +1710,7 @@ dl.portlet ul.navTree li a:hover{
         left: 25%;  
         top: 19px;  
     }
-    #portal-globalnav li.selected:first-of-type,
-    #portal-globalnav li.plain:first-of-type{
+    #nav{
         margin-left:207px;  
         float:left;
     }
@@ -1657,6 +1748,36 @@ dl.portlet ul.navTree li a:hover{
     }
 }
 @media (min-width: 768px) and (max-width: 979px) {
+    #content .documentDescription{
+        width: 100%;
+    }
+    .navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner{
+        padding:0;
+    }
+    .portletStaticText p{
+        text-align:center;   
+    }
+    .nav-collapse, .nav-collapse.collapse{
+        position: absolute;
+        right: 0%;
+        top: 100%;
+        z-index: 101;   
+    }
+    .nav-collapse #nav li{
+        display:block;
+        padding:0;
+    }
+    .nav-collapse #nav li a,.nav-collapse #nav li a:hover{
+        border:0;
+        min-width:0;
+    }
+    .portletStaticText img {
+        width:auto;
+        margin: 0 auto;
+    }
+    .portletNavigationTree{
+        width:50%;  
+    }
     .portletAgentInformation .portletItem .agent_title{
         text-align:center
     }
@@ -1736,7 +1857,10 @@ dl.portlet ul.navTree li a:hover{
     div.width-1\:2{
         width: 41.5%   
     }
-    #portal-columns, #header .row, .footer .row, .colophonWrapper,.toolkit.viewlet.plugin,#fullscreen-slider,.titlecontact.toolkit h1,#portal-breadcrumbs{
+    #portal-columns, #header .row, .footer .row, .colophonWrapper,.toolkit.viewlet.plugin,#fullscreen-slider,
+    .titlecontact.toolkit h1,
+    #portal-breadcrumbs,
+    #fullbgnav .container{
         width:100%;   
     }
     .footer #doormat-container .column-0{
@@ -1805,10 +1929,8 @@ dl.portlet ul.navTree li a:hover{
         left: 70%;  
         top: 70px;  
     }
-    #portal-globalnav li.selected:first-of-type,
-    #portal-globalnav li.plain:first-of-type{
-        margin-left:207px;  
-        float:left;
+    #nav{  
+        float:none;
     }
     div.width-9{
         width:60%;   
@@ -1845,6 +1967,33 @@ dl.portlet ul.navTree li a:hover{
     }
 }
 @media (min-width: 600px) and (max-width: 767px){
+    #content .documentDescription{
+        width: 100%;
+    }
+    .navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner{
+        padding:0;
+    }
+    .portletStaticText p{
+        text-align:center;   
+    }
+    .nav-collapse, .nav-collapse.collapse{
+        position: absolute;
+        right: 0%;
+        top: 100%;
+        z-index: 101;   
+    }
+    .nav-collapse #nav li{
+        display:block;
+        padding:0;
+    }
+    .nav-collapse #nav li a,.nav-collapse #nav li a:hover{
+        border:0;
+        min-width:0;
+    }
+    .portletStaticText img {
+        width:auto;
+        margin: 0 auto;
+    }
     #portal-column-two .portletWrapper .portletNews {
         width: 100%; 
     }
@@ -1866,11 +2015,11 @@ dl.portlet ul.navTree li a:hover{
     .portletAgentInformation .portletItem .contact_details{
         text-align:center;   
     }
-    #portal-globalnav li.plain a, #portal-globalnav li.selected a, #portal-globalnav li.selected a:hover{
+    #nav li a, #nav li.active a, #nav li.active a:hover{
         line-height:41px;   
     }
-    #portal-globalnav li{
-        float:left;   
+    #nav li{
+        float:none;   
     }
     .portletAgentInformation .portletItem .contact_details dt,
     .portletAgentInformation .portletItem .contact_details dd{
@@ -1938,7 +2087,7 @@ dl.portlet ul.navTree li a:hover{
     .width-5.position-10 {
         margin-left: -50%;
     }
-    .icons-on .row,.toolkit.viewlet.plugin,#fullscreen-slider,.titlecontact.toolkit h1,#portal-breadcrumbs{
+    .icons-on .row,.toolkit.viewlet.plugin,#fullscreen-slider,.titlecontact.toolkit h1,#portal-breadcrumbs,#fullbgnav .container{
         width:100%;   
     }
     #portal-column-content,.footer .row{
@@ -2005,8 +2154,7 @@ dl.portlet ul.navTree li a:hover{
         left: 60%;  
         top: 70px;  
     }
-    #portal-globalnav li.selected:first-of-type,
-    #portal-globalnav li.plain:first-of-type{
+    #nav{
         margin-left:207px;   
         float:left;
     }
@@ -2044,6 +2192,33 @@ dl.portlet ul.navTree li a:hover{
     }
 }
 @media (min-width: 481px) and (max-width: 599px){
+    #content .documentDescription{
+        width: 100%;
+    }
+    .navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner{
+        padding:0;
+    }
+    .portletStaticText p{
+        text-align:center;   
+    }
+    .nav-collapse, .nav-collapse.collapse{
+        position: absolute;
+        right: 0%;
+        top: 100%;
+        z-index: 101;   
+    }
+    .nav-collapse #nav li{
+        display:block;
+        padding:0;
+    }
+    .nav-collapse #nav li a,.nav-collapse #nav li a:hover{
+        border:0;
+        min-width:0;
+    }
+    .portletStaticText img {
+        width:auto;
+        margin: 0 auto;
+    }
     #portal-column-two .portletWrapper .portletNews {
         width: 100%; 
     }
@@ -2059,17 +2234,13 @@ dl.portlet ul.navTree li a:hover{
     }
     .bottom-carousel .galleria-info{
         bottom:30px;
-    }
-    .titlecontact.toolkit h1,
-    .toolkit.viewlet.plugin .lang{
-        padding:20px; 
-    }   
+    }  
     .portletAgentInformation .portletItem h3, 
     .portletAgentInformation .portletItem .agency_name,
     .portletAgentInformation .portletItem .contact_details{
         text-align:center;   
     }
-    #portal-globalnav li.plain a, #portal-globalnav li.selected a, #portal-globalnav li.selected a:hover{
+    #nav li a, #nav li.active a, #nav li.active a:hover{
         line-height:41px;   
     }
     .portletAgentInformation .portletItem .contact_details dt,
@@ -2128,7 +2299,7 @@ dl.portlet ul.navTree li a:hover{
     .icons-on .row,#header .row{
         width:460;   
     }
-    #portal-column-content,.toolkit.viewlet.plugin,#fullscreen-slider,.titlecontact.toolkit h1,#portal-breadcrumbs{
+    #portal-column-content,.toolkit.viewlet.plugin,#fullscreen-slider,.titlecontact.toolkit h1,#portal-breadcrumbs,#fullbgnav .container{
         width: 100%; 
     }
     .footer #doormat-container .column-0{
@@ -2211,12 +2382,8 @@ dl.portlet ul.navTree li a:hover{
         left: 50%;  
         top: 70px;  
     }
-    #portal-globalnav li.selected:first-of-type,
-    #portal-globalnav li.plain:first-of-type{  
-        float:left;
-    }
-    #portal-globalnav li{
-        float:left;   
+    #nav li{  
+        float:none;
     }
     div.width-9{
         width:60%;   
@@ -2240,10 +2407,10 @@ dl.portlet ul.navTree li a:hover{
         width: 100%;   
     }
     .titlecontact.toolkit h1{
-        width:100%;   
+        width:97%; 
     }
     .titlecontact.toolkit .toolkit.viewlet.plugin{
-        width:100%;   
+        width:97%;   
     }
     .portletCarouselWrapper .scrollable .items .tileItem{
         width:324px;  
@@ -2263,6 +2430,33 @@ dl.portlet ul.navTree li a:hover{
     }
 }
 @media (max-width: 480px){
+    #content .documentDescription{
+        width: 100%;
+    }
+    .navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner{
+        padding:0;
+    }
+    .portletStaticText p{
+        text-align:center;   
+    }
+    .nav-collapse, .nav-collapse.collapse{
+        position: absolute;
+        right: 0%;
+        top: 100%;
+        z-index: 101;   
+    }
+    .nav-collapse #nav li{
+        display:block;
+        padding:0;
+    }
+    .nav-collapse #nav li a,.nav-collapse #nav li a:hover{
+        border:0;
+        min-width:0;
+    }
+    .portletStaticText img {
+        width:auto;
+        margin: 0 auto;
+    }
     .site-de .form-row-listing-type .field span.option {
         width: 100%;
     }
@@ -2290,7 +2484,7 @@ dl.portlet ul.navTree li a:hover{
     .portletAgentInformation .portletItem .contact_details{
         text-align:center;   
     }
-    #portal-globalnav li.plain a, #portal-globalnav li.selected a, #portal-globalnav li.selected a:hover{
+    #nav li a, #nav li.active a, #nav li.active a:hover{
         line-height:41px;   
     }
     .portletAgentInformation .portletItem .contact_details dt,
@@ -2349,7 +2543,7 @@ dl.portlet ul.navTree li a:hover{
     .icons-on .row,#header .row,.footer .row{
         width:460;   
     }
-    #portal-column-content,.toolkit.viewlet.plugin,#fullscreen-slider,.titlecontact.toolkit h1,#portal-breadcrumbs{
+    #portal-column-content,.toolkit.viewlet.plugin,#fullscreen-slider,.titlecontact.toolkit h1,#portal-breadcrumbs,#fullbgnav .container{
         width: 100%; 
     }
     .footer #doormat-container .column-0{
@@ -2432,12 +2626,8 @@ dl.portlet ul.navTree li a:hover{
         left: 40%;  
         top: 70px;  
     }
-    #portal-globalnav li.selected:first-of-type,
-    #portal-globalnav li.plain:first-of-type{ 
-        float:left;
-    }
-    #portal-globalnav li{
-        float:left;   
+    #nav li{ 
+        float:none;
     }
     div.width-9{
         width:60%;   

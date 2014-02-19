@@ -271,15 +271,15 @@ ul#portal-languageselector li.currentLanguage{
 #portal-personaltools ul{
     margin:0;
 }
-#portal-globalnav ul.submenu li{
+#nav ul.submenu li{
     line-height:22px;
     padding:0;
     display: block;
     width:100%;   
     border-right:0;
 }
-#portal-globalnav ul.submenu li a,
-#portal-globalnav ul.submenu li a:hover{
+#nav ul.submenu li a,
+#nav ul.submenu li a:hover{
     padding:0;
     margin-top:0;
     border-right:0;
@@ -302,23 +302,38 @@ ul#portal-languageselector li.currentLanguage{
 #portal-colophon p{
     margin-bottom:0;
 }
-#portal-globalnav {
+#nav {
     margin: 0;
 }
 #portal-logo img{
     margin: 5%;
 }
-#portal-globalnav li{
+#nav li{
     display: table-cell;
     padding: 4px 0;
     vertical-align: middle;
 }
-#portal-globalnav li:last-of-type{
+#nav li:last-of-type{
     border-right:0;
 }
-#portal-globalnav li.plain a,
-#portal-globalnav li.selected a,
-#portal-globalnav li.selected a:hover{
+ul.dropdown-menu{
+    min-width: 100%;
+}
+#nav li.dropdown ul.dropdown-menu,
+#nav li.dropdown ul.dropdown-menu li,
+#nav li.dropdown ul.dropdown-menu li a{
+    width:100%;   
+}
+#nav li.dropdown ul.dropdown-menu li{
+    float:left;   
+    padding:0;
+}
+#nav li.dropdown ul.dropdown-menu li a{
+    white-space: normal;
+}
+#nav li a,
+#nav li.active a,
+#nav li.active a:hover{
     border-top: 0 none;
     display: table-cell;
     height: 32px;
@@ -540,7 +555,7 @@ div.width-full{
     #portal-colophon{
         width:100%;
     }
-    #portal-globalnav{
+    #nav{
         width: 100%;
     }
     .form-row-listing-type .field span.option {
@@ -625,7 +640,7 @@ div.width-full{
     #portal-colophon{
         width:100%;
     }
-    #portal-globalnav{
+    #nav{
         width: 100%;
         margin-top:0;
     }
@@ -711,7 +726,7 @@ div.width-full{
     #portal-colophon{
         width:100%;
     }
-    #portal-globalnav{
+    #nav{
         width: 100%;
         margin-top:0;
     }
@@ -824,7 +839,7 @@ div.width-full{
     #portal-colophon{
         width:100%;
     }
-    #portal-globalnav{
+    #nav{
         width: 100%;
         margin-top:0;
     }
@@ -940,7 +955,7 @@ div.width-full{
     #portal-colophon{
         width:100%;
     }
-    #portal-globalnav{
+    #nav{
         width: 100%;
         margin-top:0;
     }
@@ -1056,7 +1071,7 @@ div.width-full{
     #portal-colophon{
         width:100%;
     }
-    #portal-globalnav{
+    #nav{
         width: 100%;
         margin-top:0;
     }
