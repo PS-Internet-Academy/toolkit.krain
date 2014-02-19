@@ -389,7 +389,7 @@ ul#portal-languageselector li.currentLanguage{
     float:left;
     margin-bottom: 0;
     top:11px;
-    padding-right:19px;
+    padding-right:3px;
     padding-left:3px; 
 }
 #portal-colophon{
@@ -416,7 +416,6 @@ ul#portal-languageselector li.currentLanguage{
 #nav .active,#nav li.active a{
     background:#ff0000;
     position: relative;
-    line-height: 30px;
     margin:0;
 }
 .navbar .dropdown-menu:before{
@@ -457,8 +456,9 @@ ul#portal-languageselector li.currentLanguage{
     border-right: 1px solid #FFFFFF;
     color: #FFFFFF;
     font-size: 12px;
+    max-width: 110px;
     min-width: 70px;
-    padding: 0 4px;
+    padding: 0;
 }
 #nav li.active a{
     background:#ff0000;
@@ -526,7 +526,6 @@ dl.portlet dt a:link, dl.portlet dt a:visited, dl.portlet dt a:hover{
 }
 .portletCarouselWrapper .carousel {
     margin:0;
-    height:300px;
 }
 dl.portlet dt.portletHeader{
     font-size: 20px;
@@ -923,7 +922,6 @@ select, input[type="file"]{
 }
 .portletCarouselWrapper div.scrollable{
     height:100%;   
-    overflow-y: auto;
 }
 .portletCarouselWrapper{
     background-color: rgba(170, 169, 169, 0.5);
@@ -950,15 +948,26 @@ select, input[type="file"]{
     display:none;
 }
 .portletCarouselWrapper .carousel .scrollable .leadimagetile{
-    position:relative;   
+    position:relative;  
+    text-align: center;
 }
 .portletCarouselWrapper .carousel .scrollable .leadimagetile a{
-    width:100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 .portletCarouselWrapper .carousel h2.tileHeadline{
-    font-family: 'Montaga', serif;
-    font-size:14px;
-    color:#ff0000;
+    color: #FF0000;
+    font-family: 'Montaga',serif;
+    font-size: 14px;
+    line-height: 18px;
+    padding-top: 95px;
+    position: static;
+    text-align: left;
+}
+.portletCarouselWrapper .carousel .scrollable .leadimagetile h2 a{
+    position:static;  
 }
 .portletCarouselWrapper .carousel p.tileBody{
     font-family: 'Roboto', sans-serif;
@@ -1142,11 +1151,16 @@ select, input[type="file"]{
     top: 80px;   
 }
 .toolkit-slider .galleria-image-nav-left{
-    background-image:url('krain/krain-img/prev-portlets.png')  ;    
+    background-image: url("krain/krain-img/prev-portlets.png");
+    background-position: 0 40px;
+    left: 0 !important;
+    opacity: 1 !important;    
 }
 .toolkit-slider .galleria-image-nav-right{
-    background-image:url('krain/krain-img/next-portlets.png') ;
-    background-position: 50px 46px;
+    background-image: url("krain/krain-img/next-portlets.png");
+    background-position: 50px 40px;
+    opacity: 1 !important;
+    right: 0 !important;
 }
 #sidebar #tiles-list span{
     color:#000;   
@@ -1191,6 +1205,7 @@ dl.portlet ul.navTreeLevel0 > .navTreeItem{
 }
 dl.portlet ul.navTree li a {
     color: #000 !important;
+    height: 27px;
 }
 dl.portlet ul.navTree li a:hover{
     color: #fff !important;
@@ -1222,6 +1237,7 @@ dl.portlet ul.navTree li a:hover{
 .template-document_view .portletCarouselWrapper p.tileBody{
     font-family: 'Roboto', sans-serif;
     font-size:13px;
+    text-align: left;
 }
 .template-document_view .portletCarouselWrapper p.tileFooter{
     display:none;  
@@ -1250,7 +1266,11 @@ dl.portlet ul.navTree li a:hover{
 .toolkit-slider .galleria-image img{
     height: auto !important;
     width: auto !important;
+    margin: 0 auto;
 }
+.toolkit-slider .galleria-info-text{
+    padding:0;
+}   
 .switch_button{
     background-image:url('http://manage.kraincostarica.com/kraincostarica_com/en/image/button-map.png');
     position:absolute !important;
@@ -1536,8 +1556,9 @@ dl.portlet ul.navTree li a:hover{
         width: 1080px;
     }
     #nav{
-        margin-left:207px;   
+        margin-left:192px;   
         float: left;
+        width: 82%;
     }
     .form-row-listing-type .field span.option {
         width: 49%;
@@ -1578,7 +1599,7 @@ dl.portlet ul.navTree li a:hover{
         width:324px;  
     }
     .portletCarouselWrapper div.scrollable div.items div.itemPadding{
-        padding: 0 14%;
+        padding: 9% 14%;        
     }
     .formid-town-search div.formControls{
         float: left;
@@ -1722,8 +1743,9 @@ dl.portlet ul.navTree li a:hover{
         top: 19px;  
     }
     #nav{
-        margin-left:207px;  
+        margin-left:193px;  
         float:left;
+        width: 80%;
     }
     div.width-9{
         width:60%;   
