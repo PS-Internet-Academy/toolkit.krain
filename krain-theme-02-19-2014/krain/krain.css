@@ -268,6 +268,7 @@ ul#portal-languageselector li.currentLanguage{
     background:#FEE6CA url("krain/krain-img/new-background.png") no-repeat;
     background-size:100%;
     padding:2% 0;
+    background-attachment:fixed;
 }
 .town-search{
     border-bottom: 1px dashed;
@@ -678,6 +679,7 @@ table.listing tr th{
 #content .content_box  p a{
     color: #000000 !important;
     font-size: 18px;
+    padding: 0 5%;
 }
 #content p, #content table, #content dl, dl.portlet p, dl.portlet{  
     font-size:13px;
@@ -1416,6 +1418,15 @@ dl.portlet ul.navTree li a:hover{
 }
 .navbar-inner{
     background:none;   
+}
+.titlecontact.toolkit h1{  
+    letter-spacing: 0;
+}
+#content a:hover, dl.portlet a:hover{
+    color:#fff !important;   
+}
+#content ul.configlets li a{
+    color:#FFFFFF !important  
 }
 @media (min-width: 1200px){
     #content .documentDescription{
