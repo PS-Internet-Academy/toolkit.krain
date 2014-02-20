@@ -8,7 +8,7 @@ a:hover{
     display:none;   
 }
 #content-columns .portlet-print-viewlet {
-    background-image: url("http://localhost:8080/krain/en/pics/Print-listing.png");
+    background-image: url("http://kraincostarica.com/en/image/Print-listing.png");
     background-repeat: no-repeat;
     width: 88%;
     height: 28px;
@@ -253,19 +253,31 @@ ul#portal-languageselector li.currentLanguage{
 .template-listing-detail #portal-column-content #content{
     background-color: #e6e6e6;
 }
-.portletNews p a{
-    color:#000000;  
+#portal-column-two .portletNews p a,#portal-column-two .portletNews p a:hover{
+    color:#000000 !important;  
     font-family: 'Roboto', sans-serif;
     font-size:12px;
 }
-.portletNews h2 a{
-    color:#ff0000;
+.portletCarouselWrapper .tileFooter{
+    display:none;
+}
+.portletNews .portletHeader a,
+.portletCarouselWrapper .portletHeader a{
+    color: #000000 !important;
+    font-family: 'Montaga',serif;
+    font-size: 18px;   
+}
+#portal-column-two .portletNews h2 a,#portal-column-two .portletNews h2 a:hover{
+    color:#ff0000 !important;
     font-size:14px;
     font-family: 'Montaga', serif;
     font-style: italic;
 }
+img.image-left, img.image-right, .captioned img{
+    border:0;   
+}
 #main{
-    background:#FEE6CA url("krain/krain-img/new-background.png") no-repeat;
+    background:#FEE6CA url("krain/krain-img/krain background image.jpg") no-repeat;
     background-size:100%;
     padding:2% 0;
     background-attachment:fixed;
@@ -296,7 +308,8 @@ ul#portal-languageselector li.currentLanguage{
 #content-core p .image-inline:last-of-type{
     margin-right:0;   
 }
-#content #content-core p{
+#content #content-core p,
+#content #content-core li{
     color: #000000;
     font-family: 'Roboto',sans-serif;
     font-size: 18px;
@@ -456,9 +469,6 @@ ul#portal-languageselector li.currentLanguage{
     border-right: 1px solid #FFFFFF;
     color: #FFFFFF;
     font-size: 12px;
-    max-width: 110px;
-    min-width: 70px;
-    padding: 0;
 }
 #nav li.active a{
     background:#ff0000;
@@ -527,7 +537,8 @@ dl.portlet dt a:link, dl.portlet dt a:visited, dl.portlet dt a:hover{
 .portletCarouselWrapper .carousel {
     margin:0;
 }
-dl.portlet dt.portletHeader{
+dl.portlet dt.portletHeader,
+.portletCarouselWrapper dt.portletHeader{
     font-size: 20px;
     color: #ff0000;
     font-family: 'Montaga', serif;
@@ -1228,13 +1239,15 @@ dl.portlet ul.navTree li a:hover{
     font-size:18px;
     color:#000 !important;  
 }
-.template-document_view .portletCarouselWrapper h2.tileHeadline a{
+.template-document_view .portletCarouselWrapper h2.tileHeadline a,
+.portletCarouselWrapper .carousel .scrollable .leadimagetile h2 a{
     font-family: 'Montaga', serif;
     font-size:14px;
     color:#f00 !important;   
     font-style:italic;
 }
-.template-document_view .portletCarouselWrapper p.tileBody{
+.template-document_view .portletCarouselWrapper p.tileBody,
+.portletCarouselWrapper p.tileBody{
     font-family: 'Roboto', sans-serif;
     font-size:13px;
     text-align: left;
@@ -1272,7 +1285,7 @@ dl.portlet ul.navTree li a:hover{
     padding:0;
 }   
 .switch_button{
-    background-image:url('http://manage.kraincostarica.com/kraincostarica_com/en/image/button-map.png');
+    background-image:url('http://kraincostarica.com/en/image/button-map.png');
     position:absolute !important;
     z-index:100 !important;
     width:37px !important;
@@ -1391,7 +1404,7 @@ dl.portlet ul.navTree li a:hover{
 	color:#FFFFFF;
 }
 #doormat-container .column-1 p{
-	margin-top: 10px;
+	margin: 0;
 }
 .width-9.position-0{
     background:none;   
@@ -1449,6 +1462,13 @@ dl.portlet ul.navTree li a:hover{
     color:#FFFFFF !important  
 }
 @media (min-width: 1200px){
+    #nav li a,
+    #nav li.active a,
+    #nav li.active a:hover{
+        max-width: 98px;
+        min-width: 50px;
+        padding: 0 4px;
+    }
     #content .documentDescription{
         width: 47%;
     }
@@ -1612,6 +1632,13 @@ dl.portlet ul.navTree li a:hover{
     }
 }
 @media (min-width: 980px) and (max-width:1199px){ 
+    #nav li a,
+    #nav li.active a,
+    #nav li.active a:hover{
+        max-width: 98px;
+        min-width: 50px;
+        padding: 0 4px;
+    }
     #content .documentDescription{
         width: 100%;
     }
@@ -1799,10 +1826,16 @@ dl.portlet ul.navTree li a:hover{
     .nav-collapse #nav li{
         display:block;
         padding:0;
+        border-bottom:1px solid #fff;
     }
     .nav-collapse #nav li a,.nav-collapse #nav li a:hover{
         border:0;
         min-width:0;
+        border: 0 none;
+        height: 25px;
+        max-width: none;
+        min-width: 0;
+        padding: 0 4px;
     }
     .portletStaticText img {
         width:auto;
@@ -2018,10 +2051,16 @@ dl.portlet ul.navTree li a:hover{
     .nav-collapse #nav li{
         display:block;
         padding:0;
+        border-bottom:1px solid #fff;
     }
     .nav-collapse #nav li a,.nav-collapse #nav li a:hover{
         border:0;
         min-width:0;
+        border: 0 none;
+        height: 25px;
+        max-width: none;
+        min-width: 0;
+        padding: 0 4px;
     }
     .portletStaticText img {
         width:auto;
@@ -2049,7 +2088,7 @@ dl.portlet ul.navTree li a:hover{
         text-align:center;   
     }
     #nav li a, #nav li.active a, #nav li.active a:hover{
-        line-height:41px;   
+        line-height:14px;   
     }
     #nav li{
         float:none;   
@@ -2243,10 +2282,16 @@ dl.portlet ul.navTree li a:hover{
     .nav-collapse #nav li{
         display:block;
         padding:0;
+        border-bottom:1px solid #fff;
     }
     .nav-collapse #nav li a,.nav-collapse #nav li a:hover{
         border:0;
         min-width:0;
+        border: 0 none;
+        height: 25px;
+        max-width: none;
+        min-width: 0;
+        padding: 0 4px;
     }
     .portletStaticText img {
         width:auto;
@@ -2274,7 +2319,7 @@ dl.portlet ul.navTree li a:hover{
         text-align:center;   
     }
     #nav li a, #nav li.active a, #nav li.active a:hover{
-        line-height:41px;   
+        line-height:14px;   
     }
     .portletAgentInformation .portletItem .contact_details dt,
     .portletAgentInformation .portletItem .contact_details dd{
@@ -2481,10 +2526,16 @@ dl.portlet ul.navTree li a:hover{
     .nav-collapse #nav li{
         display:block;
         padding:0;
+        border-bottom:1px solid #fff;
     }
     .nav-collapse #nav li a,.nav-collapse #nav li a:hover{
         border:0;
         min-width:0;
+        border: 0 none;
+        height: 25px;
+        max-width: none;
+        min-width: 0;
+        padding: 0 4px;
     }
     .portletStaticText img {
         width:auto;
@@ -2518,7 +2569,7 @@ dl.portlet ul.navTree li a:hover{
         text-align:center;   
     }
     #nav li a, #nav li.active a, #nav li.active a:hover{
-        line-height:41px;   
+        line-height:14px;   
     }
     .portletAgentInformation .portletItem .contact_details dt,
     .portletAgentInformation .portletItem .contact_details dd{
