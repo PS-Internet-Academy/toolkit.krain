@@ -4,6 +4,10 @@ a{
 a:hover{ 
     color:#ff0000;
 }
+#box{
+    overflow-x: hidden;
+    overflow-y: auto;   
+}
 .navbar .nav-collapse .dropdown-menu{
     display:none;   
 }
@@ -279,7 +283,6 @@ img.image-left, img.image-right, .captioned img{
 #main{
     background:#FEE6CA url("krain/krain-img/krain background image.jpg") no-repeat;
     background-size:100%;
-    padding:2% 0;
     background-attachment:fixed;
 }
 .town-search{
@@ -1461,7 +1464,124 @@ dl.portlet ul.navTree li a:hover{
 #content ul.configlets li a{
     color:#FFFFFF !important  
 }
+.agentprofile-wrapper{
+    background: #D3D2C6;
+    border-radius: 15px;
+    overflow: auto;
+    padding: 2.5%;
+}
+.agentprofile-wrapper .agentportrait,
+.agentprofile-wrapper .agentprofile{
+    float:left;   
+}
+.agentprofile-wrapper .agentprofile h2{
+    text-transform: uppercase;
+    color:#ff0000;
+    font-family: 'Montaga', serif;
+    font-size:26px;
+    line-height: 20px;
+}
+.agent-office{
+    margin-top: 4%;   
+}
+.agent-contact{
+    margin:4% 0;   
+}
+.gentlanguage,.agentlanguage{
+    float:left;  
+    margin-right: 5px;
+}
+.gentlanguage img,.agentlanguage img{
+    display:none;   
+}
+.gentlanguage .language-label,.agentlanguage .language-label{
+    background-position: center top;
+    background-repeat: no-repeat;
+    display: block;
+    font-size: 13px;
+    height: 34px;
+    padding-top: 37px;
+    text-transform: uppercase;
+    width: 61px;
+    font-family: 'Montaga', serif;
+}
+.agentlanguage-en .language-label{
+    background-image:url('http://localhost:1234/Krain/en/img/USA.png');    
+}
+.agentlanguage-es .language-label{
+    background-image:url('http://localhost:1234/Krain/en/img/Spain.png');    
+}
+.agent-social{
+    float:right;   
+}
+.agentprofile-wrapper .agent-office,
+.agentprofile-wrapper .label,
+.agentprofile-wrapper .value,
+.agentprofile-wrapper .value a,
+#content .agentprofile-wrapper .value a:hover{
+    font-family: 'Montaga', serif;
+    font-size:15px;   
+    color:#000000 !important;
+}
+.agentprofile-wrapper .label{
+    padding:0;   
+    display:inline-block;
+}
+.agentprofile-wrapper .seperator{
+    display:inline-block;   
+}
+.office-phone .value,
+.us-line .value,
+.cell-phone .value,
+.skype-name .value,
+.website .value,
+.agent-email .value{
+    display:inline-block;   
+}
+.agent-updates{
+    font-family: 'Roboto', sans-serif; 
+    font-size:14px;
+    text-transform: uppercase;
+    text-align:center;
+    background:#0066ad;
+    margin-top: 5%;
+    line-height:36px;
+}
+#content .agent-social li{
+    display:inline-block;   
+    height: 34px;
+    width: 34px;
+}
+#content .agent-social .social,.agent-social .social:hover{
+    color:transparent !important;  
+    display: inline-block;
+    height: 34px;
+    overflow: hidden;
+    width: 34px;
+}
+.agent-social .facebook{
+    background:url('http://localhost:1234/Krain/en/img/agent-social-img/agent-facebook.png');      
+}
+.agent-social .twitter{
+    background:url('http://localhost:1234/Krain/en/img/agent-social-img/agent-twitter.png');
+}
+.agent-social .youtube{
+    background:url('http://localhost:1234/Krain/en/img/agent-social-img/agent-youtube.png');
+}
+.agent-social .google{
+    background:url('http://localhost:1234/Krain/en/img/agent-social-img/agent-google.png');
+}
+.agent-social .Linkedin{
+    background:url('http://localhost:1234/Krain/en/img/agent-social-img/agent-in.png');;
+}
 @media (min-width: 1200px){
+    .agentprofile-wrapper .agentportrait{
+        width:40%;        
+    }
+    .agentprofile-wrapper .agentprofile{
+        width:55%;        
+        margin-left:5%;
+    }
     #nav li a,
     #nav li.active a,
     #nav li.active a:hover{
