@@ -4,12 +4,7 @@ a{
 a:hover{ 
     color:#ff0000;
 }
-#box{
-    overflow-x: hidden;
-    overflow-y: auto;   
-}
-.navbar .nav-collapse .dropdown-menu{
-    display:none;   
+#box{  
 }
 #content-columns .portlet-print-viewlet {
     background-image: url("http://kraincostarica.com/en/image/Print-listing.png");
@@ -306,7 +301,8 @@ img.image-left, img.image-right, .captioned img{
     width: 47%;
 }
 #content-core p .image-inline{
-    margin-right:4.4%;   
+    margin-right: 2%;
+    margin-top: 5%   
 }
 #content-core p .image-inline:last-of-type{
     margin-right:0;   
@@ -460,7 +456,7 @@ img.image-left, img.image-right, .captioned img{
     display:none; 
 }
 #nav li.dropdown ul.dropdown-menu, #nav li.dropdown ul.dropdown-menu li, #nav li.dropdown ul.dropdown-menu li a{
-    width:95%;   
+    width:100%;   
 }
 .form-row-tabbed .formTab a span{
     color:#fff; 
@@ -790,12 +786,15 @@ table.listing tr th{
     font-weight: normal;
     color:#000000;
 }
+.section-agent dl.portlet dt.portletHeader, .portletCarouselWrapper dt.portletHeader{
+    color:#000000;    
+}
 #portal-column-one .portletWrapper .portlet{
     box-shadow: 0 0 13px -1px #000000;
     color:#ffffff;
     background-color: rgba(170, 169, 169, 0.5);
 }
-#portal-column-two .portletWrapper .portlet{
+#portal-column-two .portletWrapper{
     color:#ffffff;
     background-color: rgba(170, 169, 169, 0.5);
 }
@@ -1467,12 +1466,11 @@ dl.portlet ul.navTree li a:hover{
 .agentprofile-wrapper{
     background: #D3D2C6;
     border-radius: 15px;
-    overflow: auto;
     padding: 2.5%;
 }
 .agentprofile-wrapper .agentportrait,
 .agentprofile-wrapper .agentprofile{
-    float:left;   
+    display:inline-block;   
 }
 .agentprofile-wrapper .agentprofile h2{
     text-transform: uppercase;
@@ -1487,9 +1485,29 @@ dl.portlet ul.navTree li a:hover{
 .agent-contact{
     margin:4% 0;   
 }
+.section-agent #viewlet-below-content-title{
+    display:none;
+}
+.section-agent #content h1.documentFirstHeading{
+    color: #000000;
+    margin-top:22px;  
+    margin-bottom: 5px;
+}
+.section-agent #content #content-core p,.section-agent #content #content-core li{
+    font-family: 'Roboto', sans-serif;
+    font-size:13px;
+}
+.section-agent dl.portlet dt.portletHeader,.section-agent .portletCarouselWrapper dt.portletHeader{
+    border:0;   
+    padding-top: 25px;
+}
+.section-agent dl.portlet dd.portletItem,.section-agent dl.portlet dd.portletFooter,.section-agent dl.portletError dd{
+    padding: 5% 5% 25px;  
+}
 .gentlanguage,.agentlanguage{
     float:left;  
     margin-right: 5px;
+    margin-top: 5px;
 }
 .gentlanguage img,.agentlanguage img{
     display:none;   
@@ -1499,7 +1517,6 @@ dl.portlet ul.navTree li a:hover{
     background-repeat: no-repeat;
     display: block;
     font-size: 13px;
-    height: 34px;
     padding-top: 37px;
     text-transform: uppercase;
     width: 61px;
@@ -1513,6 +1530,7 @@ dl.portlet ul.navTree li a:hover{
 }
 .agent-social{
     float:right;   
+    margin-top: 6px;
 }
 .agentprofile-wrapper .agent-office,
 .agentprofile-wrapper .label,
@@ -1537,6 +1555,8 @@ dl.portlet ul.navTree li a:hover{
 .website .value,
 .agent-email .value{
     display:inline-block;   
+    float: right;
+    width: 62%;
 }
 .agent-updates{
     font-family: 'Roboto', sans-serif; 
@@ -1580,7 +1600,7 @@ dl.portlet ul.navTree li a:hover{
     }
     .agentprofile-wrapper .agentprofile{
         width:55%;        
-        margin-left:5%;
+        margin-left:4%;
     }
     #nav li a,
     #nav li.active a,
@@ -1752,6 +1772,12 @@ dl.portlet ul.navTree li a:hover{
     }
 }
 @media (min-width: 980px) and (max-width:1199px){ 
+    .agentprofile-wrapper .agentportrait{
+        margin-bottom:4%;;        
+    }
+    .agentprofile-wrapper .agentprofile{
+        width:100%;        
+    }
     #nav li a,
     #nav li.active a,
     #nav li.active a:hover{
@@ -1928,6 +1954,31 @@ dl.portlet ul.navTree li a:hover{
     }
 }
 @media (min-width: 768px) and (max-width: 979px) {
+    #nav li.dropdown ul.dropdown-menu, #nav li.dropdown ul.dropdown-menu li, #nav li.dropdown ul.dropdown-menu li a{   
+        background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+        color: #FFFFFF !important;
+    }
+    ul#nav{
+        padding:10px;   
+        width: auto;
+    }
+    #nav li.dropdown ul.dropdown-menu li{
+        padding-top:7px;   
+    }
+    #nav li.dropdown ul.dropdown-menu li a{
+        height: 25px;
+        padding-left: 15px;
+        padding-right: 0;
+        text-align: left;   
+        border-bottom-width: 0;
+    }
+    .agentprofile-wrapper .agentportrait{
+        width:40%;        
+    }
+    .agentprofile-wrapper .agentprofile{
+        width:55%;        
+        margin-left:4%;
+    }
     #content .documentDescription{
         width: 100%;
     }
@@ -1939,13 +1990,13 @@ dl.portlet ul.navTree li a:hover{
     }
     .nav-collapse, .nav-collapse.collapse{
         position: absolute;
-        right: 0%;
+        right: 5px;
         top: 100%;
         z-index: 101;   
     }
     .nav-collapse #nav li{
         display:block;
-        padding:0;
+        padding:4px 0;
         border-bottom:1px solid #fff;
     }
     .nav-collapse #nav li a,.nav-collapse #nav li a:hover{
@@ -2153,6 +2204,30 @@ dl.portlet ul.navTree li a:hover{
     }
 }
 @media (min-width: 600px) and (max-width: 767px){
+    #nav li.dropdown ul.dropdown-menu, #nav li.dropdown ul.dropdown-menu li, #nav li.dropdown ul.dropdown-menu li a{   
+        background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+        color: #FFFFFF !important;
+    }
+    ul#nav{
+        padding:10px;   
+        width: auto;
+    }
+    #nav li.dropdown ul.dropdown-menu li{
+        padding-top:7px;   
+    }
+    #nav li.dropdown ul.dropdown-menu li a{
+        height: 25px;
+        padding-left: 15px;
+        padding-right: 0;
+        text-align: left;   
+        border-bottom-width: 0;
+    }
+    .agentprofile-wrapper .agentportrait{
+        margin-bottom:4%;        
+    }
+    .agentprofile-wrapper .agentprofile{
+        width:100%;        
+    }
     #content .documentDescription{
         width: 100%;
     }
@@ -2170,7 +2245,6 @@ dl.portlet ul.navTree li a:hover{
     }
     .nav-collapse #nav li{
         display:block;
-        padding:0;
         border-bottom:1px solid #fff;
     }
     .nav-collapse #nav li a,.nav-collapse #nav li a:hover{
@@ -2384,6 +2458,30 @@ dl.portlet ul.navTree li a:hover{
     }
 }
 @media (min-width: 481px) and (max-width: 599px){
+    #nav li.dropdown ul.dropdown-menu, #nav li.dropdown ul.dropdown-menu li, #nav li.dropdown ul.dropdown-menu li a{   
+        background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+        color: #FFFFFF !important;
+    }
+    ul#nav{
+        padding:10px;   
+        width: auto;
+    }
+    #nav li.dropdown ul.dropdown-menu li{
+        padding-top:7px;   
+    }
+    #nav li.dropdown ul.dropdown-menu li a{
+        height: 25px;
+        padding-left: 15px;
+        padding-right: 0;
+        text-align: left;   
+        border-bottom-width: 0;
+    }
+    .agentprofile-wrapper .agentportrait{
+        margin-bottom:4%;        
+    }
+    .agentprofile-wrapper .agentprofile{
+        width:100%;        
+    }
     #content .documentDescription{
         width: 100%;
     }
@@ -2401,7 +2499,6 @@ dl.portlet ul.navTree li a:hover{
     }
     .nav-collapse #nav li{
         display:block;
-        padding:0;
         border-bottom:1px solid #fff;
     }
     .nav-collapse #nav li a,.nav-collapse #nav li a:hover{
@@ -2628,6 +2725,30 @@ dl.portlet ul.navTree li a:hover{
     }
 }
 @media (max-width: 480px){
+    #nav li.dropdown ul.dropdown-menu, #nav li.dropdown ul.dropdown-menu li, #nav li.dropdown ul.dropdown-menu li a{   
+        background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+        color: #FFFFFF !important;
+    }
+    ul#nav{
+        padding:10px;   
+        width: auto;
+    }
+    #nav li.dropdown ul.dropdown-menu li{
+        padding-top:7px;   
+    }
+    #nav li.dropdown ul.dropdown-menu li a{
+        height: 25px;
+        padding-left: 15px;
+        padding-right: 0;
+        text-align: left;   
+        border-bottom-width: 0;
+    }
+    .agentprofile-wrapper .agentportrait{
+        margin-bottom:4%;        
+    }
+    .agentprofile-wrapper .agentprofile{
+        width:100%;        
+    }
     #content .documentDescription{
         width: 100%;
     }
@@ -2645,7 +2766,6 @@ dl.portlet ul.navTree li a:hover{
     }
     .nav-collapse #nav li{
         display:block;
-        padding:0;
         border-bottom:1px solid #fff;
     }
     .nav-collapse #nav li a,.nav-collapse #nav li a:hover{
