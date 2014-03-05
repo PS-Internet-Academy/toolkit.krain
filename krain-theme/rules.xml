@@ -68,5 +68,6 @@
     <xi:include href="facetednavigation-rules.xml"/>
     <xi:include href="krain/krain-rules.xml"/>
     <append css:theme="#site-scripts" css:content="#portal-footer-wrapper > div > script"/>
+    
     </rules>
 </rules>

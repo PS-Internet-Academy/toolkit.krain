@@ -1,3 +1,16 @@
+.toggler_hide{
+    display: none;
+}
+#doormat-container .discreet{
+    font-size: 70%;
+}
+#portal-columns .portletCarouselWrapper .carousel h2.tileHeadline{
+    padding-top: 140px;
+}
+.portletCarouselWrapper .carousel{
+    height: 422px;
+}
+
 a{
     color:#ffffff;   
 }
@@ -238,7 +251,7 @@ ul#portal-languageselector li.currentLanguage{
     background:none;
 }
 #portal-column-content #content{
-    background-color: rgba(170, 169, 169, 0.5);
+    background-color: rgba(255, 255, 255, 0.65);
 }
 .section-search-properties #portal-column-content #content,
 .section-listing-collection #portal-column-content #content,
@@ -276,7 +289,7 @@ img.image-left, img.image-right, .captioned img{
     border:0;   
 }
 #main{
-    background:#FEE6CA url("krain/krain-img/krain background image.jpg") no-repeat;
+    background:#FEE6CA url("krain/krain-img/bg-new.jpg") no-repeat;
     background-size:100%;
     background-attachment:fixed;
 }
@@ -535,6 +548,7 @@ dl.portlet dt a:link, dl.portlet dt a:visited, dl.portlet dt a:hover{
 }
 .portletCarouselWrapper .carousel {
     margin:0;
+    height:auto;
 }
 dl.portlet dt.portletHeader,
 .portletCarouselWrapper dt.portletHeader{
@@ -670,7 +684,7 @@ table.listing tr th{
 #content .position-5,
 #content .position-9,
 #content .position-10{
-    background-color:rgba(170, 169, 169, 0.5);
+    background-color:rgba(255, 255, 255, 0.65);
 }
 .portaltype-collective-cover-content #content .cover-collection-tile a:hover{
     color:#f00 !important;  
@@ -791,12 +805,12 @@ table.listing tr th{
 }
 #portal-column-one .portletWrapper .portlet{
     box-shadow: 0 0 13px -1px #000000;
-    color:#ffffff;
-    background-color: rgba(170, 169, 169, 0.5);
+    color:#000;
+    background-color: rgba(255, 255, 255, 0.65);
 }
 #portal-column-two .portletWrapper{
-    color:#ffffff;
-    background-color: rgba(170, 169, 169, 0.5);
+    color:#000;
+    background-color: rgba(255, 255, 255, 0.65);
 }
 .template-listing-detail #portal-column-one .portletWrapper .portlet{
     border-radius: 8px;
@@ -934,10 +948,11 @@ select, input[type="file"]{
     padding:0;   
 }
 .portletCarouselWrapper div.scrollable{
-    height:100%;   
+    height:auto;   
 }
-.portletCarouselWrapper{
-    background-color: rgba(170, 169, 169, 0.5);
+.portletCarouselWrapper div.scrollable div.items{
+    height: auto;
+    position: relative;   
 }
 .portletCarouselWrapper .navi{
     display:none;
@@ -945,13 +960,13 @@ select, input[type="file"]{
 .portletCarouselWrapper a.prev{
     background-image:url('krain/krain-img/prev-portlets.png');
     background-repeat: no-repeat;
-    background-position: 0 46px;
+    background-position: 0 80px;
     width:38px
 }
 .portletCarouselWrapper a.next{
     background-image:url('krain/krain-img/next-portlets.png');
     background-repeat: no-repeat;
-    background-position: 0 46px;
+    background-position: 0 80px;
     width:38px
 }
 .portletCarouselWrapper a.prev span{
@@ -978,6 +993,7 @@ select, input[type="file"]{
     padding-top: 95px;
     position: static;
     text-align: left;
+    margin-bottom: 0.2em;
 }
 .portletCarouselWrapper .carousel .scrollable .leadimagetile h2 a{
     position:static;  
@@ -1042,7 +1058,6 @@ select, input[type="file"]{
 .titlecontact.toolkit .toolkit.viewlet.plugin{
     margin:0; 
     text-align: right;
-    float:left;
 }
 .top-carousel .galleria-info-text{
     padding:0;   
@@ -1079,7 +1094,7 @@ select, input[type="file"]{
     z-index: 3;
 }
 .top-carousel{
-    border: 14px solid rgba(255, 255, 255, .5);    
+    border: 14px solid rgba(255, 255, 255, 0.5);    
 }
 .bottom-carousel .galleria-container img{
     min-width:1080px !important;
@@ -1205,8 +1220,12 @@ select, input[type="file"]{
 dl.portlet ul.navTree .navTreeCurrentItem{
     border:none;
     margin:0;
-    background:#ab0202;
+    background:#ff0000;
     color:#fff !important;
+}
+#portal-column-content #content-core h3{
+    font-family: 'Montaga',serif;   
+    color:#000000;
 }
 dl.portlet ul.navTreeLevel0 > .navTreeItem{
     padding:0; 
@@ -1253,6 +1272,7 @@ dl.portlet ul.navTree li a:hover{
     font-family: 'Roboto', sans-serif;
     font-size:13px;
     text-align: left;
+    line-height: 1.3em;
 }
 .template-document_view .portletCarouselWrapper p.tileFooter{
     display:none;  
@@ -1671,10 +1691,12 @@ dl.portlet ul.navTree li a:hover{
         width:1080px;   
     }   
     .titlecontact.toolkit h1{
-        width:51%;   
+        position: absolute;
+        width: 45%;
     }
     .titlecontact.toolkit .toolkit.viewlet.plugin{
-        width:44.5%;   
+        width:1080px;
+        margin:0 auto;
     }
     #portal-column-content.width-full #listing-info {
         width: 55%;
@@ -1934,9 +1956,11 @@ dl.portlet ul.navTree li a:hover{
     }
     .titlecontact.toolkit h1{
         width:51%;   
+        position:absolute;
     }
     .titlecontact.toolkit .toolkit.viewlet.plugin{
-        width: 35.5%;   
+        width: 950px;;   
+        margin:0 auto;
     }
     .portletCarouselWrapper .scrollable .items .tileItem{
         width:259px;  
@@ -2021,10 +2045,6 @@ dl.portlet ul.navTree li a:hover{
     #portal-column-two .portletWrapper .portletNews {
         float: left;
         width: 50%; 
-    }
-    .portletCarouselWrapper{
-        float: right;
-        width: 342px;
     }
     .toggler_default #form-widgets-price_min{
         margin-right: 11px;
@@ -2185,13 +2205,13 @@ dl.portlet ul.navTree li a:hover{
         width:51%;   
     }
     .titlecontact.toolkit .toolkit.viewlet.plugin{
-        width:48%;   
+        width:99%;   
     }
     .portletCarouselWrapper .scrollable .items .tileItem{
         width: 364px; 
     }
     .portletCarouselWrapper div.scrollable div.items div.itemPadding{
-        padding: 0 9%;
+        padding: 0 20%;
     }
     .formid-town-search div.formControls{
         float: right;
@@ -2441,7 +2461,7 @@ dl.portlet ul.navTree li a:hover{
         width:51%;   
     }
     .titlecontact.toolkit .toolkit.viewlet.plugin{
-        width:44.5%;   
+        width:99%;   
     }
     .portletCarouselWrapper .scrollable .items .tileItem{
         width:324px;  
