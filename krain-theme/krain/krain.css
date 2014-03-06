@@ -1,6 +1,13 @@
 .toggler_hide{
     display: none;
 }
+#feature-listing-slider .lang{
+    display:none;  
+}
+#globalwrapper #feature-listing-slider .lang-en,
+#globalwrapper #feature-listing-slider .lang-de{
+    display:none;  
+}
 #doormat-container .discreet{
     font-size: 70%;
 }
@@ -10,14 +17,22 @@
 .portletCarouselWrapper .carousel{
     height: 422px;
 }
-
 a{
     color:#ffffff;   
 }
 a:hover{ 
     color:#ff0000;
 }
+.portaltype-collective-cover-content #fullscreen-slider{
+    display:none;   
+}
+#main #fullscreen-slider .carousel .carousel-text{
+    bottom: 13px;
+    height: 43px;
+    top: auto;
+}   
 #box{  
+    overflow: auto;
 }
 #content-columns .portlet-print-viewlet {
     background-image: url("http://kraincostarica.com/en/image/Print-listing.png");
@@ -343,6 +358,10 @@ img.image-left, img.image-right, .captioned img{
 }
 #fullscreen-slider{
     margin:0 auto;   
+}
+#fullscreen-slider .carousel{
+    height: 330px;
+    margin-bottom: 0;   
 }
 #nav ul.submenu li a{
     color: #000000 !important;
@@ -826,8 +845,11 @@ table.listing tr th{
     padding-left: 0;
     padding-right: 0;
 }
+#fullbgnav .navbar-inner{
+    box-shadow: none;   
+}
 dl.portlet dd.portletItem, dl.portlet dd.portletFooter, dl.portletError dd{ 
-     padding: 5% 9% 9%;
+     padding: 1% 9%;
 }
 .formHelp{
     color: #5E5E5E;
@@ -1002,7 +1024,7 @@ select, input[type="file"]{
     font-family: 'Roboto', sans-serif;
     font-size:13px;
 }
-#location-page-carousel .carousel-text,#front-page-carousel .carousel-text{
+#fullscreen-slider .carousel .carousel-text,#front-page-carousel .carousel-text{
     background-color: rgba(0, 0, 0, 0.4);
     bottom: 387px;
     font-family: 'Rancho', cursive;
@@ -1017,7 +1039,7 @@ select, input[type="file"]{
     top:337px;
     line-height:44px;
 }
-#location-page-carousel .carousel-text .carousel-title,#front-page-carousel .carousel-text .carousel-title{
+#fullscreen-slider .carousel .carousel-text .carousel-title,#front-page-carousel .carousel-text .carousel-title{
     margin-left:2%;   
 }
 .portaltype-collective-cover-content .carousel-pager{
@@ -1093,8 +1115,10 @@ select, input[type="file"]{
     bottom: 2px;   
     z-index: 3;
 }
-.top-carousel{
+#fullscreen-slider .carousel,.top-carousel{
     border: 14px solid rgba(255, 255, 255, 0.5);    
+    width: 97%;
+    margin-top:0;
 }
 .bottom-carousel .galleria-container img{
     min-width:1080px !important;

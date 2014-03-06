@@ -6,10 +6,15 @@
     xmlns:xi="http://www.w3.org/2001/XInclude"
     >   
 
-    <drop css:content="#location-page-carousel"/>
+    <drop
+        css:theme="#fullscreen-slider"
+        css:if-not-content="#viewlet-above-content .carousel"
+    />
+
+    <drop css:content="#viewlet-above-content .carousel"/>
     
     <append 
-        css:content="#location-page-carousel" 
+        css:content="#viewlet-above-content .carousel" 
         css:theme="#fullscreen-slider"  
         method="raw"
     />
