@@ -6,6 +6,9 @@
     width:100%;   
     font-size:14px;
 }
+#content  #parent-fieldname-description{
+    margin:0;   
+}
 .section-choose-your-agent #content{
     padding:1% 3% 0;   
 }
@@ -14,8 +17,35 @@
     font-size:24px;
     text-transform:uppercase;
 }
-.agent-select a:hover{
+.agentsearch-wrapper {
+    padding: 1% 3%;
+}
+.agentprofile-wrapper .agentportrait{
+    float:left;   
+}
+.agent-areas{
+    margin-bottom:8px;   
+}
+#content .agent-updates a{
+    color:#fff; 
+}
+.agent-select a,.agent-select a:hover,
+.agent .agent-profilepage a,.agent .agent-profilepage a:hover{
     color:#fff;    
+}
+.agent .agent-profilepage{
+    margin-bottom:8px;   
+}
+.agent-areas .label,.agent-areas .seperator{
+    color:#f00;  
+    font-size:16px;
+    font-family: 'Montaga', serif;
+}
+.area-list .area-list-item{
+    display: block;
+    font-family: 'Montaga',serif;
+    font-size: 16px;
+    width: 100%;
 }
 .agent-updates a{
     color:#fff;   
@@ -24,17 +54,14 @@
     background-color: rgba(255, 255, 255, 0.65);
     overflow: auto;
 }
-.agentsearch-wrapper .agent-wrapper{
-    text-align:center;   
-}
 .agentsearch-wrapper .agent{
-    background-color: rgba(255, 255, 255, 0.65);
+    background-color: #d1d1d1;
     display: inline-block;
-    height: 400px;
     margin-bottom: 30px;
     padding: 5px;
     text-align: center;
     width: 200px;
+    float: left;
 }
 .agentsearch-wrapper .agent .agent-avatar img{
     width:190px;
@@ -44,13 +71,42 @@
     font-family: 'Montaga', serif;
     font-size:18px;
     text-transform:uppercase;
+    margin-top: 8px;
 }
+.agentsearch-wrapper .agent .agent-profilepage,
 .agentsearch-wrapper .agent .agent-select{
     font-family: 'Roboto', sans-serif;
     font-size:14px;
     text-transform:uppercase;
     line-height:36px;
-    background:#004d83;
+}
+.agentsearch-wrapper .agent .agent-profilepage{
+    /* IE10 Consumer Preview */ 
+        background-image: -ms-linear-gradient(top, #DA0000 0%, #8D1414 100%);    
+    /* Mozilla Firefox */ 
+        background-image: -moz-linear-gradient(top, #DA0000 0%, #8D1414 100%);    
+    /* Opera */ 
+        background-image: -o-linear-gradient(top, #DA0000 0%, #8D1414 100%);    
+    /* Webkit (Safari/Chrome 10) */ 
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #DA0000), color-stop(1, #8D1414));    
+    /* Webkit (Chrome 11+) */ 
+        background-image: -webkit-linear-gradient(top, #DA0000 0%, #8D1414 100%);    
+    /* W3C Markup, IE10 Release Preview */ 
+        background-image: linear-gradient(to bottom, #DA0000 0%, #8D1414 100%); 
+}
+.agentsearch-wrapper .agent .agent-select{
+    /* IE10 Consumer Preview */ 
+        background-image: -ms-linear-gradient(top, #005895 0%, #0C3F63 100%);    
+    /* Mozilla Firefox */ 
+        background-image: -moz-linear-gradient(top, #005895 0%, #0C3F63 100%);   
+    /* Opera */ 
+        background-image: -o-linear-gradient(top, #005895 0%, #0C3F63 100%);    
+    /* Webkit (Safari/Chrome 10) */ 
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #005895), color-stop(1, #0C3F63));   
+    /* Webkit (Chrome 11+) */ 
+        background-image: -webkit-linear-gradient(top, #005895 0%, #0C3F63 100%);   
+    /* W3C Markup, IE10 Release Preview */ 
+        background-image: linear-gradient(to bottom, #005895 0%, #0C3F63 100%);   
 }
 .toggler_hide{
     display: none;
@@ -1486,7 +1542,7 @@ dl.portlet ul.navTree li a:hover{
 }
 #content .toggler_default select#form-widgets-listing_type {
     width: 90%;
-	text-align: left;
+    text-align: left;
 	margin-left: 5%
 }
 .toggler_hide img {
@@ -1613,10 +1669,10 @@ dl.portlet ul.navTree li a:hover{
     font-family: 'Montaga', serif;
 }
 .agentlanguage-en .language-label{
-    background-image:url('http://localhost:1234/Krain/en/img/USA.png');    
+    background-image:url("krain/krain-img/USA.png");    
 }
 .agentlanguage-es .language-label{
-    background-image:url('http://localhost:1234/Krain/en/img/Spain.png');    
+    background-image:url("krain/krain-img/Spain.png");    
 }
 .agent-social{
     float:right;   
@@ -1653,9 +1709,29 @@ dl.portlet ul.navTree li a:hover{
     font-size:14px;
     text-transform: uppercase;
     text-align:center;
-    background:#0066ad;
+    /* IE10 Consumer Preview */ 
+        background-image: -ms-linear-gradient(top, #005895 0%, #0C3F63 100%);    
+    /* Mozilla Firefox */ 
+        background-image: -moz-linear-gradient(top, #005895 0%, #0C3F63 100%);   
+    /* Opera */ 
+        background-image: -o-linear-gradient(top, #005895 0%, #0C3F63 100%);    
+    /* Webkit (Safari/Chrome 10) */ 
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #005895), color-stop(1, #0C3F63));   
+    /* Webkit (Chrome 11+) */ 
+        background-image: -webkit-linear-gradient(top, #005895 0%, #0C3F63 100%);   
+    /* W3C Markup, IE10 Release Preview */ 
+        background-image: linear-gradient(to bottom, #005895 0%, #0C3F63 100%); 
     margin-top: 5%;
     line-height:36px;
+    margin-top: 200px;
+}
+.agentprofile-wrapper .agentportrait{
+    width:266px;   
+}
+.agentprofile-wrapper .agentportrait .agent-avatar img{
+    height: 187px !important;
+    position: absolute;
+    width: 266px !important;   
 }
 #content .agent-social li{
     display:inline-block;   
@@ -1688,12 +1764,6 @@ dl.portlet ul.navTree li a:hover{
     .agentsearch-wrapper .agent{
         margin-right: 4%;   
         float:left;
-    }
-    .agentsearch-wrapper{
-        padding: 1% 0 3% 3%;
-    }
-    .agentprofile-wrapper .agentportrait{
-        width:40%;        
     }
     .agentprofile-wrapper .agentprofile{
         width:55%;        
@@ -1878,20 +1948,12 @@ dl.portlet ul.navTree li a:hover{
         margin:0;   
     }
     .agentsearch-wrapper .agent{
-        margin-right: 2%;   
+        margin-right: 4%;   
         float:left;
-    }
-    .agentsearch-wrapper{
-        padding: 1% 0 3% 3%;
-    }
-    .agentprofile-wrapper .agentportrait{
-        float: left;
-        margin-bottom: 4%;
-        width: 40%;        
     }
     .agentprofile-wrapper .agentprofile{
         margin-left: 4%;
-        width: 55%;        
+        width: 50%;        
     }
     #nav li a,
     #nav li.active a,
@@ -2072,10 +2134,7 @@ dl.portlet ul.navTree li a:hover{
 }
 @media (min-width: 768px) and (max-width: 979px) {
     .agentsearch-wrapper .agent{
-        margin:30px 2% 0   ;
-    }
-    .agentsearch-wrapper{
-        padding: 1% 0 3%;
+        margin:30px 4% 0 0  ;
     }
     #nav li.dropdown ul.dropdown-menu, #nav li.dropdown ul.dropdown-menu li, #nav li.dropdown ul.dropdown-menu li a{   
         background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
@@ -2094,9 +2153,6 @@ dl.portlet ul.navTree li a:hover{
         padding-right: 0;
         text-align: left;   
         border-bottom-width: 0;
-    }
-    .agentprofile-wrapper .agentportrait{
-        width:40%;        
     }
     .agentprofile-wrapper .agentprofile{
         width:55%;        
@@ -2142,7 +2198,6 @@ dl.portlet ul.navTree li a:hover{
         text-align:center
     }
     #portal-column-two .portletWrapper .portletNews {
-        float: left;
         width: 50%; 
     }
     .toggler_default #form-widgets-price_min{
@@ -2326,10 +2381,7 @@ dl.portlet ul.navTree li a:hover{
 }
 @media (min-width: 600px) and (max-width: 767px){
     .agentsearch-wrapper .agent{
-        margin: 30px 5% 0;   
-    }
-    .agentsearch-wrapper{
-        padding: 1% 0 3%;
+        margin: 30px 4% 0 0;   
     }
     #nav li.dropdown ul.dropdown-menu, #nav li.dropdown ul.dropdown-menu li, #nav li.dropdown ul.dropdown-menu li a{   
         background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
@@ -2352,8 +2404,15 @@ dl.portlet ul.navTree li a:hover{
     .agentprofile-wrapper .agentportrait{
         margin-bottom:4%;        
     }
+    .agent-social{
+        float:left !important;   
+    }
+    #content .agent-social ul{
+        margin:0;   
+    }
     .agentprofile-wrapper .agentprofile{
-        width:100%;        
+        margin-left: 3%;
+        width: 44%;        
     }
     #content .documentDescription{
         width: 100%;
@@ -2586,10 +2645,7 @@ dl.portlet ul.navTree li a:hover{
 }
 @media (min-width: 481px) and (max-width: 599px){
     .agentsearch-wrapper .agent{
-        margin: 30px 3% 0;   
-    }
-    .agentsearch-wrapper{
-        padding: 1% 0 3%;
+        margin: 30px 4% 0 0;   
     }
     #nav li.dropdown ul.dropdown-menu, #nav li.dropdown ul.dropdown-menu li, #nav li.dropdown ul.dropdown-menu li a{   
         background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
@@ -2859,10 +2915,7 @@ dl.portlet ul.navTree li a:hover{
 }
 @media (max-width: 480px){
     .agentsearch-wrapper .agent{
-        margin-right: 2%;   
-    }
-    .agentsearch-wrapper{
-        padding: 1% 0 3%;
+        margin: 30px 3% 0 0;   
     }
     #nav li.dropdown ul.dropdown-menu, #nav li.dropdown ul.dropdown-menu li, #nav li.dropdown ul.dropdown-menu li a{   
         background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
