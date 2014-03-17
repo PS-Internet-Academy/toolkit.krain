@@ -316,9 +316,6 @@ ul#portal-languageselector li.currentLanguage{
 #nav li:last-of-type{
     border-right:0;
 }
-ul.dropdown-menu{
-    min-width: 100%;
-}
 #nav li.dropdown ul.dropdown-menu,
 #nav li.dropdown ul.dropdown-menu li,
 #nav li.dropdown ul.dropdown-menu li a{
