@@ -121,6 +121,7 @@ div.scrollable div.items div.itemPadding{
     background-color: rgba(0, 0, 0, 0.4);
     line-height: 50px;
     text-transform: uppercase;
+    margin-bottom: 18px;
 }
 #feature-listing-above-footer{
     background-color:transparent;
@@ -133,8 +134,8 @@ div.scrollable div.items div.itemPadding{
 }
 @media (min-width: 1200px){
     #feature-listing-above-footer div.scrollable {
-        width:98%;
-        padding-left: 2%;
+        padding-left: 3%;
+        width: 97%;
     }
     #feature-listing-above-footer .lastCarousel,#feature-listing-slider div{
         width:1080px;
@@ -147,7 +148,7 @@ div.scrollable div.items div.itemPadding{
         width: 327px;
     }
     .portaltype-document .mls-listing .listing-image{
-        width: 320px;   
+        width: 302px;   
     }
     .mls-listing .price{
         width:92%;

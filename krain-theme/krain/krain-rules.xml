@@ -14,7 +14,7 @@
     <drop css:content="#viewlet-above-content .carousel"/>
     
     <append 
-        css:content="#viewlet-above-content .carousel" 
+        css:content="#viewlet-above-content > div.carousel" 
         css:theme="#fullscreen-slider"  
         method="raw"
     />

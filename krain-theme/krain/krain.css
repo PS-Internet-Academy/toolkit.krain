@@ -1588,7 +1588,7 @@ dl.portlet ul.navTree li a:hover{
     margin-left: 5%
 }
 .toggler_hide img {
-	margin:10% 10%;
+    margin:10% 10%;
 } 
 #doormat-container .doormatSectionBody a {
 	color:#FFFFFF;
@@ -1716,8 +1716,7 @@ dl.portlet ul.navTree li a:hover{
 .agentlanguage-es .language-label{
     background-image:url("krain/krain-img/Spain.png");    
 }
-.agent-social{
-    float:right;   
+.agent-social{  
     margin-top: 6px;
 }
 .agentprofile-wrapper .agent-office,
@@ -1813,11 +1812,11 @@ dl.portlet ul.navTree li a:hover{
     margin-bottom:1.5em;   
 }
 @media (min-width: 1200px){
-    #nav li.dropdown ul.dropdown-menu li a.hasDropDown{
-        border-top: none;
+    .agent-social{  
+        float:left;
     }
-    #nav li.dropdown ul.dropdown-menu li a{
-        border-top: 1px solid #CACACA;
+    #nav li.dropdown ul.dropdown-menu li a.hasDropDown{
+        border-bottom: 1px solid #cacaca;
     }
     #nav li.dropdown ul.dropdown-menu li ul.submenu li:last-of-type a{
         border-bottom: 1px solid #CACACA;
@@ -1827,13 +1826,18 @@ dl.portlet ul.navTree li a:hover{
     }
     .nav-collapse #nav .dropdown-menu li:hover ul.submenu li a{   
         transition:max-height 2s;
+        transition:display 2s;
         max-height:500px;
+        display:block;
     }
     .nav-collapse #nav .dropdown-menu li ul.submenu li a{
         max-height:0;
         transition:max-height 2s;
+        transition:display 2s;
         width:auto;
-        overflow: hidden;
+        overflow: hidden;      
+        display:none;
+        border-bottom: 1px solid #CACACA;
     }
     .agentsearch-wrapper .agent{
         margin-right: 4%;   
@@ -2015,11 +2019,11 @@ dl.portlet ul.navTree li a:hover{
     }
 }
 @media (min-width: 980px) and (max-width:1199px){ 
-    #nav li.dropdown ul.dropdown-menu li a.hasDropDown{
-        border-top: none;
+    .agent-social{  
+        float:left;
     }
-    #nav li.dropdown ul.dropdown-menu li a{
-        border-top: 1px solid #CACACA;
+    #nav li.dropdown ul.dropdown-menu li a.hasDropDown{
+        border-bottom: 1px solid #cacaca;
     }
      #nav li.dropdown ul.dropdown-menu li ul.submenu li:last-of-type a{
         border-bottom: 1px solid #CACACA;
@@ -2030,12 +2034,15 @@ dl.portlet ul.navTree li a:hover{
     .nav-collapse #nav .dropdown-menu:hover ul.submenu li a{   
         transition:max-height 2s;
         max-height:500px;;
+        display:block;
     }
     .nav-collapse #nav .dropdown-menu ul.submenu li a{
         max-height:0;
         transition:max-height 2s;
         width:auto;
         overflow: hidden;
+        display:none;
+        border-bottom: 1px solid #CACACA;
     }
     .agent-social{
         float:left !important;   
@@ -2229,6 +2236,13 @@ dl.portlet ul.navTree li a:hover{
     }
 }
 @media (min-width: 768px) and (max-width: 979px) {    
+    .agent-social {
+        width: 62%;
+        float:right;
+    }
+    #content .agent-social ul{
+        margin-left: 0;
+    }
     .nav-collapse #nav .dropdown-menu ul.submenu li:last-of-type,
     #nav li.dropdown ul.dropdown-menu li:last-of-type{
         border:0;   
@@ -2483,6 +2497,9 @@ dl.portlet ul.navTree li a:hover{
     }
 }
 @media (min-width: 600px) and (max-width: 767px){
+    .agent-social{  
+        float:left;
+    }
     .nav-collapse #nav .dropdown-menu ul.submenu li:last-of-type,
     #nav li.dropdown ul.dropdown-menu li:last-of-type{
         border:0;   
@@ -2754,6 +2771,13 @@ dl.portlet ul.navTree li a:hover{
     }
 }
 @media (min-width: 481px) and (max-width: 599px){
+    .agent-social {
+        width: 62%;
+        float:right;
+    }
+    #content .agent-social ul{
+        margin-left: 0;
+    }
     .nav-collapse #nav .dropdown-menu ul.submenu li:last-of-type,
     #nav li.dropdown ul.dropdown-menu li:last-of-type{
         border:0;   
@@ -3031,6 +3055,12 @@ dl.portlet ul.navTree li a:hover{
     }
 }
 @media (max-width: 480px){
+    .agent-social{
+        float:left;   
+    }
+    #content .agent-social ul{
+        margin-left: 0;
+    }
     .nav-collapse #nav .dropdown-menu ul.submenu li:last-of-type,
     #nav li.dropdown ul.dropdown-menu li:last-of-type{
         border:0;   
