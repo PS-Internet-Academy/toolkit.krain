@@ -8,6 +8,7 @@ $(document).ready(function () {
             $(el).remove();
         }
     });
+    var jQuery17 = jQuery;
     jQuery17('.dropdown-toggle').click(function () {
         var self = $(this).parent();
         $('.dropdown.open').each(function (idx, item) {

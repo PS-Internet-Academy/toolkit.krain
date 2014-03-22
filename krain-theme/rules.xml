@@ -15,6 +15,12 @@
     
     <copy
         attributes="class"
+        css:content="#portal-personaltools"
+        css:theme=".dropdown-menu li"
+    />
+    
+    <copy
+        attributes="class"
         css:content="body"
         css:theme="div#globalwrapper"
     />

@@ -73,11 +73,13 @@
 
                <div class="nav-collapse" id="topnav-collapse">
                   <ul id="nav" class="nav">
-                     <li><a href="#about">About</a></li>
+                     <li>
+                        <a href="#about">About</a>
+                     </li>
                      <li class="dropdown" data-dropdown='dropdown'>
-                     <a href="#" class="dropdown-toggle">Services</a>
-                     <ul class="dropdown-menu">
-                        <li><a href="#item1">Plone Development</a></li>
+                        <a href="#" class="dropdown-toggle">Services</a>
+                        <ul class="dropdown-menu">
+                                <a href="#item1">Plone Development</a>
                      </ul>
                      </li>
                      <li><a href="#contact">Contact</a></li>
@@ -159,24 +161,34 @@
       </div>
     
             <!-- scripts concatenated and minified via ant build script-->
+        
             <script>
                var jQuery14 = jQuery;
             </script>
+            <!--
             <script src="jquery-1.7.1.min.js"></script>
-            
+            -->
             <script src="bootstrap/js/bootstrap.js"></script>
+            
             <script>
-        
-               var jQuery17 = jQuery;
+               try{
+                   var jQuery17 = jQuery;
                
-               $ = jQuery14;
-               jQuery = jQuery14;
-               jQuery17(document).ready(function () {
-                  jQuery17('.dropdown-toggle').dropdown();
-               });
+                    $ = jQuery14;
+                    jQuery = jQuery14;
+                    jQuery17(document).ready(function () {
+                        try{
+                            jQuery17('.dropdown-toggle').dropdown();
+                        }catch(err){console.log(err);}
+                        
+                    });
+                }
+                catch(err){console.log(err);}
             </script>
+        
             <script defer src="js/plugins.js"></script>
             <script defer src="js/script.js"></script>
+    
             <div id="site-scripts"></div>
 
             <!-- end scripts-->

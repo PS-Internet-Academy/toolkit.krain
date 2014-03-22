@@ -1,3 +1,13 @@
+.navTree .navTree{
+    margin-left:0px;   
+}
+ul.submenu ul{
+    left:0;   
+}
+#contentview-user_data-personal-preferences,
+#contentview-user_data-change-password{
+    display:none;   
+}
 .navbar .dropdown-menu{
     left:auto;
     width:auto;
@@ -15,8 +25,8 @@
     float:left;
     width:100%;
 }
-.dropdown-menu .submenu li a{
-    padding:0 7% 0 5%;
+.nav-collapse #nav .dropdown-menu .submenu li a{
+    padding:0 5% 0 11%;
 }
 #nav li.dropdown ul.dropdown-menu, #nav li.dropdown ul.dropdown-menu li, #nav li.dropdown ul.dropdown-menu li a{
     max-width:none;   
@@ -30,7 +40,7 @@
     font-size:14px;
 }
 #content  #parent-fieldname-description{
-    margin:0;   
+    margin-bottom: 1.5em;  
 }
 .section-choose-your-agent #content{
     padding:1% 3% 0;   
@@ -277,12 +287,16 @@ small{
 .toolkit.viewlet.plugin{
     margin:0 auto;
 }
+.nav-collapse #nav .dropdown-menu ul.submenu li{
+    width:100%;
+}
 ul.submenu{
-    z-index: 3;
     display:block;
+    z-index: 3;
     left: 0;
     position: relative;
     top: 0;
+    
 }
 #content .documentFirstHeading{
     font-family: 'Montaga', serif;
@@ -498,9 +512,6 @@ img.image-left, img.image-right, .captioned img{
     color: #000000;
     background:#E3E3E3;
 }
-#nav ul.submenu li{
-    border-bottom: 1px solid #C1C1C1;
-}
 #portal-personaltools dd a{ 
     color:#000000;
     border-bottom:1px solid #c1c1c1;
@@ -604,7 +615,6 @@ img.image-left, img.image-right, .captioned img{
     margin: 0;
     padding: 0;
     white-space: normal;   
-    border-bottom:1px solid #cacaca;
     height:auto;
     line-height:22px;
     padding:0 5%;
@@ -617,6 +627,8 @@ img.image-left, img.image-right, .captioned img{
     width:100%;   
     color: #000000;
     text-align: left;
+    font-family: 'Montaga', serif;
+    font-size:12px;
 }
 .form-row-tabbed .formTab a span{
     color:#fff; 
@@ -981,7 +993,7 @@ table.listing tr th{
     box-shadow: none;   
 }
 dl.portlet dd.portletItem, dl.portlet dd.portletFooter, dl.portletError dd{ 
-     padding: 1% 9%;
+     padding: 1% 9% 1.5em;
 }
 .formHelp{
     color: #5E5E5E;
@@ -1573,7 +1585,7 @@ dl.portlet ul.navTree li a:hover{
 #content .toggler_default select#form-widgets-listing_type {
     width: 90%;
     text-align: left;
-	margin-left: 5%
+    margin-left: 5%
 }
 .toggler_hide img {
 	margin:10% 10%;
@@ -1640,7 +1652,7 @@ dl.portlet ul.navTree li a:hover{
     color:#FFFFFF !important  
 }
 .agentprofile-wrapper{
-    background: #D3D2C6;
+    background: url('krain/krain-img/bgpattern.png');
     border-radius: 15px;
     padding: 2.5%;
 }
@@ -1758,6 +1770,10 @@ dl.portlet ul.navTree li a:hover{
 .site-de .agent-updates {
     font-size:12px;   
 }
+.site-es .agent-updates{
+    line-height:20px;   
+    padding: 6px;
+}
 .agentprofile-wrapper .agentportrait{
     width:266px;   
 }
@@ -1793,7 +1809,32 @@ dl.portlet ul.navTree li a:hover{
 .agent-social .Linkedin{
     background:url('krain/krain-img/agent-in.png');;
 }
+#content #content-core p{
+    margin-bottom:1.5em;   
+}
 @media (min-width: 1200px){
+    #nav li.dropdown ul.dropdown-menu li a.hasDropDown{
+        border-top: none;
+    }
+    #nav li.dropdown ul.dropdown-menu li a{
+        border-top: 1px solid #CACACA;
+    }
+    #nav li.dropdown ul.dropdown-menu li ul.submenu li:last-of-type a{
+        border-bottom: 1px solid #CACACA;
+    }
+    #portal-column-content.width-3\:4.position-0{
+        width:69%;   
+    }
+    .nav-collapse #nav .dropdown-menu li:hover ul.submenu li a{   
+        transition:max-height 2s;
+        max-height:500px;
+    }
+    .nav-collapse #nav .dropdown-menu li ul.submenu li a{
+        max-height:0;
+        transition:max-height 2s;
+        width:auto;
+        overflow: hidden;
+    }
     .agentsearch-wrapper .agent{
         margin-right: 4%;   
         float:left;
@@ -1974,6 +2015,28 @@ dl.portlet ul.navTree li a:hover{
     }
 }
 @media (min-width: 980px) and (max-width:1199px){ 
+    #nav li.dropdown ul.dropdown-menu li a.hasDropDown{
+        border-top: none;
+    }
+    #nav li.dropdown ul.dropdown-menu li a{
+        border-top: 1px solid #CACACA;
+    }
+     #nav li.dropdown ul.dropdown-menu li ul.submenu li:last-of-type a{
+        border-bottom: 1px solid #CACACA;
+    }
+    #portal-column-content.width-3\:4.position-0{
+        width:69%;   
+    }
+    .nav-collapse #nav .dropdown-menu:hover ul.submenu li a{   
+        transition:max-height 2s;
+        max-height:500px;;
+    }
+    .nav-collapse #nav .dropdown-menu ul.submenu li a{
+        max-height:0;
+        transition:max-height 2s;
+        width:auto;
+        overflow: hidden;
+    }
     .agent-social{
         float:left !important;   
     }
@@ -2165,9 +2228,13 @@ dl.portlet ul.navTree li a:hover{
         height:280px; 
     }
 }
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 768px) and (max-width: 979px) {    
+    .nav-collapse #nav .dropdown-menu ul.submenu li:last-of-type,
+    #nav li.dropdown ul.dropdown-menu li:last-of-type{
+        border:0;   
+    }
     .agentsearch-wrapper .agent{
-        margin:30px 4% 0 0  ;
+        margin:30px 4% 0 0 ;
     }
     #nav li.dropdown ul.dropdown-menu, #nav li.dropdown ul.dropdown-menu li, #nav li.dropdown ul.dropdown-menu li a{   
         background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
@@ -2185,7 +2252,10 @@ dl.portlet ul.navTree li a:hover{
         padding-left: 15px;
         padding-right: 0;
         text-align: left;   
-        border-bottom-width: 0;
+        border-bottom: 1px solid #fff;
+    }
+    .nav-collapse #nav .dropdown-menu .submenu li a{
+        border:0;   
     }
     .agentprofile-wrapper .agentprofile{
         width:55%;        
@@ -2413,6 +2483,10 @@ dl.portlet ul.navTree li a:hover{
     }
 }
 @media (min-width: 600px) and (max-width: 767px){
+    .nav-collapse #nav .dropdown-menu ul.submenu li:last-of-type,
+    #nav li.dropdown ul.dropdown-menu li:last-of-type{
+        border:0;   
+    }
     .agentsearch-wrapper .agent{
         margin: 30px 4% 0 0;   
     }
@@ -2432,7 +2506,10 @@ dl.portlet ul.navTree li a:hover{
         padding-left: 15px;
         padding-right: 0;
         text-align: left;   
-        border-bottom-width: 0;
+        border-bottom: 1px solid #fff;
+    }
+    .nav-collapse #nav .dropdown-menu .submenu li a{
+        border:0;   
     }
     .agentprofile-wrapper .agentportrait{
         margin-bottom:4%;        
@@ -2677,6 +2754,10 @@ dl.portlet ul.navTree li a:hover{
     }
 }
 @media (min-width: 481px) and (max-width: 599px){
+    .nav-collapse #nav .dropdown-menu ul.submenu li:last-of-type,
+    #nav li.dropdown ul.dropdown-menu li:last-of-type{
+        border:0;   
+    }
     .agentsearch-wrapper .agent{
         margin: 30px 4% 0 0;   
     }
@@ -2696,7 +2777,10 @@ dl.portlet ul.navTree li a:hover{
         padding-left: 15px;
         padding-right: 0;
         text-align: left;   
-        border-bottom-width: 0;
+        border-bottom: 1px solid #fff;
+    }
+    .nav-collapse #nav .dropdown-menu .submenu li a{
+        border:0;   
     }
     .agentprofile-wrapper .agentportrait{
         margin-bottom:4%;        
@@ -2947,6 +3031,10 @@ dl.portlet ul.navTree li a:hover{
     }
 }
 @media (max-width: 480px){
+    .nav-collapse #nav .dropdown-menu ul.submenu li:last-of-type,
+    #nav li.dropdown ul.dropdown-menu li:last-of-type{
+        border:0;   
+    }
     .agentsearch-wrapper .agent{
         margin: 30px 3% 0 0;   
     }
@@ -2966,7 +3054,10 @@ dl.portlet ul.navTree li a:hover{
         padding-left: 15px;
         padding-right: 0;
         text-align: left;   
-        border-bottom-width: 0;
+        border-bottom: 1px solid #fff;
+    }
+    .nav-collapse #nav .dropdown-menu .submenu li a{
+        border:0;   
     }
     .agentprofile-wrapper .agentportrait{
         margin-bottom:4%;        
