@@ -1369,16 +1369,7 @@ div.overlay-ajax {
 div.overlay-iframe {
     height: 60%;
 }
-div.overlaybg div.close,
-div.overlay div.close {
-    background: none transparent;
-    position: absolute;
-    left: -14px;
-    top: -14px;
-    cursor: pointer;
-    height: 30px;
-    width: 30px;
-}
+
 .pb-ajax {
     overflow-y: auto;
 }
