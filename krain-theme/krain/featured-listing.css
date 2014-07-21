@@ -30,14 +30,14 @@ div.scrollable div.items div.itemPadding{
     position: relative;
     z-index: 1;
     height: auto !important;
-    background:#fff;
+    background:rgba(255, 255, 255, 0.65);
     border-radius: 10px;
 }
 #feature-listing-above-footer .carousel img {
+    max-height: none;
     max-width: none;
-    position: relative;
-    left: -10%;
-    top: -30%;
+    min-width: 100%;
+    position: relative;    
 }
 #feature-listing-above-footer .carousel .prev{
     left: 9%;
@@ -134,27 +134,33 @@ div.scrollable div.items div.itemPadding{
 }
 @media (min-width: 1200px){
     #feature-listing-above-footer div.scrollable {
-        padding-left: 3%;
-        width: 97%;
+        padding-left: 2%;
+        width: 98%;
     }
     #feature-listing-above-footer .lastCarousel,#feature-listing-slider div{
         width:1080px;
         margin: 0 auto;
     }
+    .portaltype-collective-cover-content #feature-listing-above-footer .scrollable .items .tileItem,
+    .section-agents #feature-listing-above-footer .scrollable .items .tileItem{
+        width: 350px !important;
+        left:auto;
+    }
     #feature-listing-above-footer .scrollable .items .tileItem {
         width: 350px !important;
+        left:-26px;
     }
     .mls-listing .listing-image {
         width: 327px;
     }
-    .portaltype-document .mls-listing .listing-image{
-        width: 302px;   
-    }
     .mls-listing .price{
         width:92%;
     }
-    .portaltype-document .mls-listing .price {
-        width: 90%;
+    .section-agents .mls-listing .listing-image{
+        width:300px;   
+    }
+    .section-agents .mls-listing .price{
+        width:295px;
     }
 }
 @media (min-width: 980px) and (max-width:1199px){
@@ -170,8 +176,14 @@ div.scrollable div.items div.itemPadding{
         width:950px;
         margin: 0 auto;
     }
+    .portaltype-collective-cover-content #feature-listing-above-footer .scrollable .items .tileItem,
+    .section-agents #feature-listing-above-footer .scrollable .items .tileItem{
+        width: 310px !important;
+        left: auto;
+    }
     #feature-listing-above-footer .scrollable .items .tileItem {
         width: 310px !important;
+        left: -51px;
     }
     .mls-listing .listing-image {
         width: 280px;
@@ -191,22 +203,22 @@ div.scrollable div.items div.itemPadding{
     }
     #feature-listing-above-footer .lastCarousel,#feature-listing-slider div{
         width:750px;
-        margin: 0 auto;
+        margin: 0 auto;        
+    }
+    .portaltype-collective-cover-content #feature-listing-above-footer .scrollable .items .tileItem ,
+    .section-agents #feature-listing-above-footer .scrollable .items .tileItem{
+        width: 374px !important;
+        left: auto;
     }
     #feature-listing-above-footer .scrollable .items .tileItem {
         width: 374px !important;
+        left: -10px;
     }
     .mls-listing .listing-image {
         width: 339px;
     }
-    .portaltype-document .mls-listing .listing-image {
-        width: 320px;
-    }
     .mls-listing .price{
-        width:90.5%;
-    }
-    .portaltype-document .mls-listing .price{
-        width:84.4%;
+        width:334px;
     }
 }
 @media (min-width: 600px) and (max-width: 767px){
@@ -231,14 +243,8 @@ div.scrollable div.items div.itemPadding{
     .mls-listing .listing-image {
         width: 270px;
     }
-    .portaltype-document .mls-listing .listing-image {
-        width: 250px;
-    }
     .mls-listing .price{
-        width:92.3%;
-    }
-    .portaltype-document .mls-listing .price {
-        width: 80%;
+        width:265px;
     }
     #feature-listing-above-footer .carousel .prev{
         left: 0;   
@@ -260,29 +266,29 @@ div.scrollable div.items div.itemPadding{
         width:460px;
         margin: 0 auto;
     }
+    .portaltype-collective-cover-content #feature-listing-above-footer .scrollable .items .tileItem ,
+    .section-agents #feature-listing-above-footer .scrollable .items .tileItem{
+        width: 494px !important;
+        left: auto;
+    }
     #feature-listing-above-footer .scrollable .items .tileItem {
         width: 494px !important;
+        left: -170px;
     }
     .mls-listing .listing-image {
         width: 327px;
     }
-    .portaltype-document .mls-listing .listing-image {
-        width: 347px;
-    }
     .mls-listing .price{
-        width:65.8%;
-    }
-    .portaltype-document .mls-listing .price {
-        width: 69.4%;
+        width:322px;
     }
 }
 @media (max-width: 480px){
     #feature-listing-above-footer div.scrollable {
         width:87.5%;
-         margin: 0 auto;
+        margin: 0 auto;
     }
     .portaltype-document .mls-listing .price {
-        width: 64%;
+        width: 315px;
     }
     .portaltype-document .mls-listing .listing-image {
         width: 320px;
@@ -291,8 +297,14 @@ div.scrollable div.items div.itemPadding{
         width:450px;
         margin: 0 auto;
     }
+    .portaltype-collective-cover-content #feature-listing-above-footer .scrollable .items .tileItem ,
+    .section-agents #feature-listing-above-footer .scrollable .items .tileItem{
+        width: 412px !important;
+        left: auto;
+    }
     #feature-listing-above-footer .scrollable .items .tileItem {
         width: 412px !important;
+        left: -54px;
     }
     .mls-listing .listing-image {
         width: 327px;

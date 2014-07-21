@@ -6,9 +6,29 @@
     xmlns:xi="http://www.w3.org/2001/XInclude"
     > 
 
+    <replace css:theme-children="#personaltool-menu" 
+        css:content-children="#portal-personaltools ul"/>
+    <replace css:theme-children="#personaltool-menuheader" 
+        css:content-children="#portal-personaltools .actionMenuHeader a"/>
+    <replace css:theme-children="#secondary-nav" css:if-content="#anon-personalbar">
+        <li><xsl:copy-of css:select="#personaltools-login"/></li>
+    </replace>
+    <replace 
+        css:theme-children="#tri-nav"
+        css:content="#portal-languageselector li"
+    />
+
     <drop
         css:theme="#fullscreen-slider"
         css:if-not-content="#viewlet-above-content .carousel"
+    />
+    
+    <drop
+        css:content=".portletQuickSearch .form-row-object-type"
+    />
+    
+    <drop
+        css:content=".portletQuickSearch .form-row-sizes" 
     />
 
     <drop css:content="#viewlet-above-content .carousel"/>

@@ -6,8 +6,9 @@
 
 $(window).load(function() {
   if($(".template-view .toolkit-slider").length>0){
+      
     if(Galleria){
-   
+        
       Galleria.run('.template-view .toolkit-slider', {
         dataConfig: function(img) {
           return {
@@ -31,5 +32,6 @@ $(window).load(function() {
         
       });
     }
+ 
   }
 });

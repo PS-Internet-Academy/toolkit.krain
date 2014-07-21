@@ -1,3 +1,56 @@
+#globalwrapper.userrole-agent #contentview-local_roles,
+#globalwrapper.userrole-agent #contentview-redirection,
+#globalwrapper.userrole-agent #contentview-header-plugins-config,
+#globalwrapper.userrole-agent #plone-contentmenu-actions,
+#globalwrapper.userrole-agent #plone-contentmenu-multilingual,
+#globalwrapper.userrole-agent #contentview-local_roles,
+#globalwrapper.userrole-agent #contentview-redirection,
+#globalwrapper.userrole-agent #plone-contentmenu-display,
+#globalwrapper.userrole-agent #plone-contentmenu-factories,
+#globalwrapper.userrole-agent #contentview-folderContents
+{
+    display:none;   
+}
+input[type="radio"], input[type="checkbox"] {
+    margin: 3px 3px 3px 0;
+}
+#main .pfg-form label{
+    display: inline;
+}
+#main .pfg-form .label{
+	color: #000000;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 18px;
+    padding: 0;
+}
+#content .content_box .tile-content{
+    display:block !important;
+}
+.content_box .tile-content a.prettySociable.internal-link{
+	display: table-cell;
+	font-size: 18px;
+ 	color: #000000 !important;
+	text-align: center;
+}
+.content_box .tile-content a.internal-link{
+	font-size: 18px;
+ 	color: #000000 !important;
+	text-align: center;
+}
+#portal-column-content #content .content_box .tile-content a.prettySociable.internal-link:hover{
+ 	color: #000000 !important;
+}
+#content legend{
+    border:none;  
+}
+.nobg{
+    background:none !important;    
+}
+#secondary-nav,
+#tri-nav{
+    display:none;   
+}
 .navTree .navTree{
     margin-left:0px;   
 }
@@ -80,8 +133,9 @@ ul.submenu ul{
     font-size: 16px;
     width: 100%;
 }
-.agent-updates a{
+#content .agent-updates a{
     color:#fff;   
+    border:none !important;
 }
 .agentsearch-wrapper{
     background-color: rgba(255, 255, 255, 0.65);
@@ -96,9 +150,12 @@ ul.submenu ul{
     width: 200px;
     float: left;
 }
+.agentsearch-wrapper .agent .agent-avatar{
+    width:200px;
+    height:200px;
+}
 .agentsearch-wrapper .agent .agent-avatar img{
-    width:190px;
-    height:180px;
+    height: 100%;
 }
 .agentsearch-wrapper .agent .agent-name h2{
     font-family: 'Montaga', serif;
@@ -148,7 +205,7 @@ ul.submenu ul{
     font-size: 70%;
 }
 #portal-columns .portletCarouselWrapper .carousel h2.tileHeadline{
-    padding-top: 140px;
+    padding-top: 190px;
 }
 .portletCarouselWrapper .carousel{
     height: 422px;
@@ -163,7 +220,7 @@ a:hover{
     display:none;   
 }
 #main #fullscreen-slider .carousel .carousel-text{
-    bottom: 13px;
+    bottom: 0;
     height: 43px;
     top: auto;
 }   
@@ -234,6 +291,16 @@ small{
     font-family: 'Roboto', sans-serif;
     font-size:12px;
 }
+.galleria-container .galleria-stage .galleria-image img{
+    margin:0 auto;   
+    left: 0 !important;
+}
+.galleria-image-nav{
+    display:none;   
+}
+.galleria-container{
+    border:none;   
+}
 #content div.documentByLine{
     color:#000000;   
 }
@@ -277,7 +344,6 @@ small{
 .titlecontact.toolkit{
     background: none repeat scroll 0 0 #000000;
     color: #FFFFFF;
-    float: left;
     font-family: 'Montaga',serif;
     font-size: 22px;
     line-height: 48px;
@@ -317,7 +383,7 @@ ul.submenu{
     border: 0 none;
     text-align:center;
 }
-.toggler_default input#form-buttons-search {
+.toggler_default input#form-buttons-search{
     background-color: #B40404;
     box-shadow: 0.4px 0.4px 0.4px 0.4px #585858;
     color: #FFFFFF;
@@ -327,6 +393,22 @@ ul.submenu{
     padding: 0;
     width: 105px;
     background-image: linear-gradient(#df0000, #8c0707);
+}
+#form-buttons-search-advanced,.Quicksearchbutton{
+    background-color: #B40404;
+    background-image: linear-gradient(#DF0000, #8C0707);
+    box-shadow: 0.4px 0.4px 0.4px 0.4px #585858;
+    color: #FFFFFF;
+    display: block;
+    font-family: 'Roboto',sans-serif;
+    font-size: 14px;
+    padding: 8px;
+    position: absolute;
+    -ms-transform: rotate(90deg);  /* Microsoft - Internet Explorer 9 */ 
+    -moz-transform: rotate(90deg);  /* Mozilla - Firefox 3.5+ */ 
+    -o-transform: rotate(90deg);  /* Opera 10.5+ */ 
+    -webkit-transform: rotate(90deg); /* Chrome, Safari */ 
+    transform: rotate(90deg);   /* W3C - not really reqd yet */
 }
 .portaltype-collective-cover-content #content{
     margin:0;   
@@ -418,9 +500,6 @@ ul#portal-languageselector li.currentLanguage{
 .portaltype-collective-cover-content #portal-column-content #content{
     background:none;   
 }
-.template-listing-detail #portal-column-content #content{
-    background-color: #e6e6e6;
-}
 #portal-column-two .portletNews p a,#portal-column-two .portletNews p a:hover{
     color:#000000 !important;  
     font-family: 'Roboto', sans-serif;
@@ -497,10 +576,12 @@ img.image-left, img.image-right, .captioned img{
 }
 #fullscreen-slider{
     margin:0 auto;   
+    padding-top: 35px;
 }
 #fullscreen-slider .carousel{
-    height: 330px;
+    height: 300px;
     margin-bottom: 0;   
+    overflow: visible;
 }
 #nav ul.submenu li a{
     color: #000000 !important;
@@ -517,7 +598,7 @@ img.image-left, img.image-right, .captioned img{
     border-bottom:1px solid #c1c1c1;
 }
 #doormat-container{
-    background:red; 
+    background:none; 
 }
 #doormat-container p{
     color:#ffffff;  
@@ -526,20 +607,18 @@ img.image-left, img.image-right, .captioned img{
 }
 #doormat-container dl{
     overflow:auto;   
+    margin: 0;
 }
 .column-0 .doormatSection .doormatSectionBody{
-    float:left;
-    margin-right:5%;
+    float: left;
+    margin-right: 5%;
+    text-align: center;
 }
 .column-0 .doormatSection .doormatSectionBody:first-of-type{
     margin-top: 2%;
 }
 #doormat-container.columns-2 .column-0{
-    background:#ff0000 url("krain/krain-img/leftfooterbackground2.png") no-repeat left;
-}
-.footer{
-    background: linear-gradient(to left, #ff0000 50%, #ffffff 50%);
-    background:-webkit-linear-gradient(left, #ffffff 50%,#ff0000 1%);
+    background:none;
 }
 .portletNews .portletHeader{
     background:none;
@@ -615,7 +694,6 @@ img.image-left, img.image-right, .captioned img{
     margin: 0;
     padding: 0;
     white-space: normal;   
-    height:auto;
     line-height:22px;
     padding:0 5%;
     width: auto !important;
@@ -645,6 +723,9 @@ img.image-left, img.image-right, .captioned img{
     background:#ff0000;
 }
 #nav li.active a:hover{
+    background:#ff0000;
+}
+#nav li a:hover,#nav li.hover{
     background:#ff0000;
 }
 #header .row{
@@ -865,7 +946,9 @@ table.listing tr th{
 #content .content_box  p a{
     color: #000000 !important;
     font-size: 18px;
-    padding: 0 5%;
+}
+#content .content_box p a:last-of-type{
+    width:100%;
 }
 #content p, #content table, #content dl, dl.portlet p, dl.portlet{  
     font-size:13px;
@@ -951,6 +1034,7 @@ table.listing tr th{
 #main #portal-column-two .portletWrapper .portletQuickSearch{
     background-color: #E7E7E7;   
     border: 1px solid #B3B2B2;
+    position: relative;
 }
 #main #portal-column-two label{
     color:#000000;   
@@ -979,11 +1063,9 @@ table.listing tr th{
     border-radius: 8px;
     box-shadow: 0 0 13px -1px #000000;
     color:#ffffff;
-    background-color: #e6e6e6;
 }
 .template-listing-detail #portal-column-two .portletWrapper .portlet{
     color:#ffffff;
-    background-color: #e6e6e6;
 }
 .field input[type="text"] {
     padding-left: 0;
@@ -995,12 +1077,16 @@ table.listing tr th{
 dl.portlet dd.portletItem, dl.portlet dd.portletFooter, dl.portletError dd{ 
      padding: 1% 9% 1.5em;
 }
+dl.portletQuickSearch dd.portletItem{ 
+     padding: 1% 12% 1.5em;
+}
 .formHelp{
     color: #5E5E5E;
     font-size: 12px;
 }
 .listing #listing-images {
     border: 1px solid #CCCCCC;
+    position: static;
 }
 .field input[type="text"] {
     width: 100%;
@@ -1037,7 +1123,7 @@ dl.portlet dd.portletItem, dl.portlet dd.portletFooter, dl.portletError dd{
     display:none;   
 }
 .listing #listing-images{
-    background:#FFFFFF;   
+    background:rgba(255, 255, 255, 0.6);   
 }
 .listing .galleria-counter{
     display:none !important;   
@@ -1126,13 +1212,13 @@ select, input[type="file"]{
 .portletCarouselWrapper a.prev{
     background-image:url('krain/krain-img/prev-portlets.png');
     background-repeat: no-repeat;
-    background-position: 0 80px;
+    background-position: 0 110px;
     width:38px
 }
 .portletCarouselWrapper a.next{
     background-image:url('krain/krain-img/next-portlets.png');
     background-repeat: no-repeat;
-    background-position: 0 80px;
+    background-position: 0 110px;
     width:38px
 }
 .portletCarouselWrapper a.prev span{
@@ -1146,10 +1232,16 @@ select, input[type="file"]{
     text-align: center;
 }
 .portletCarouselWrapper .carousel .scrollable .leadimagetile a{
+    height: 180px;
     left: 0;
+    overflow: hidden;
     position: absolute;
     top: 0;
     width: 100%;
+}
+.portletCarouselWrapper .carousel .scrollable .leadimagetile a img{
+    max-height:100%;
+    width:auto;
 }
 .portletCarouselWrapper .carousel h2.tileHeadline{
     color: #FF0000;
@@ -1274,7 +1366,7 @@ select, input[type="file"]{
 .top-carousel .galleria-info-text .galleria-info-description{
     background-color: rgba(0, 0, 0, 0.8);
     color: #FFFFFF;
-    font-family: 'Rancho',cursive;
+    font-family: 'rancho',cursive;
     font-size: 24px;
     font-style: italic;
     font-weight: normal;
@@ -1405,7 +1497,7 @@ dl.portlet ul.navTreeLevel0 > .navTreeItem{
 }
 dl.portlet ul.navTree li a {
     color: #000 !important;
-    height: 27px;
+    height: auto;
 }
 dl.portlet ul.navTree li a:hover{
     color: #fff !important;
@@ -1475,7 +1567,25 @@ dl.portlet ul.navTree li a:hover{
     padding:0;
 }   
 .switch_button{
-    background-image:url('http://kraincostarica.com/en/image/button-map.png');
+    background-image:url('krain/krain-img/search-button.png');
+    position:absolute !important;
+    z-index:100 !important;
+    width:37px !important;
+    height:33px !important;
+    bottom:300px !important;
+    border-radius:10px !important;
+    background-position:center !important;   
+}
+.global_switch_button,
+.northernlowlandsback,
+.guanacasteback,
+.nicoyaback,
+.centralpacificback,
+.centralvalleyandHighlandsback,
+.caribbeanback,
+.southpacificback
+{
+    background-image:url('krain/krain-img/button-map.png');
     position:absolute !important;
     z-index:100 !important;
     width:37px !important;
@@ -1532,9 +1642,9 @@ dl.portlet ul.navTree li a:hover{
 }
 #main .toggler_default #formfield-form-widgets-price_min .horizontal{
     position:absolute;
+    margin-left: 10%;
 }
 #main .toggler_default #formfield-form-widgets-price_min{
-    text-align: right;
     clear: none;
     float: left;
 }
@@ -1596,6 +1706,9 @@ dl.portlet ul.navTree li a:hover{
 #doormat-container .column-1 p{
 	margin: 0;
 }
+#doormat-container .column-1 p.small-text{
+    font-size:11px   
+}
 .width-9.position-0{
     background:none;   
 }
@@ -1652,7 +1765,6 @@ dl.portlet ul.navTree li a:hover{
     color:#FFFFFF !important  
 }
 .agentprofile-wrapper{
-    background: url('krain/krain-img/bgpattern.png');
     border-radius: 15px;
     padding: 2.5%;
 }
@@ -1671,7 +1783,10 @@ dl.portlet ul.navTree li a:hover{
     margin-top: 4%;   
 }
 .agent-contact{
-    margin:4% 0;   
+    font-size: 13px;
+    line-height: 1.5em;
+    margin: 8% 0;
+    min-height: 129px;
 }
 .section-agent #viewlet-below-content-title{
     display:none;
@@ -1716,6 +1831,9 @@ dl.portlet ul.navTree li a:hover{
 .agentlanguage-es .language-label{
     background-image:url("krain/krain-img/Spain.png");    
 }
+.agentlanguage-de .language-label {
+    background-image: url("krain/krain-img/Germany.png");
+}
 .agent-social{  
     margin-top: 6px;
 }
@@ -1747,7 +1865,7 @@ dl.portlet ul.navTree li a:hover{
 }
 .agent-updates{
     font-family: 'Roboto', sans-serif; 
-    font-size:14px;
+    font-size:13px;
     text-transform: uppercase;
     text-align:center;
     /* IE10 Consumer Preview */ 
@@ -1764,7 +1882,7 @@ dl.portlet ul.navTree li a:hover{
         background-image: linear-gradient(to bottom, #005895 0%, #0C3F63 100%); 
     margin-top: 5%;
     line-height:36px;
-    margin-top: 200px;
+    margin-top: 275px;
 }
 .site-de .agent-updates {
     font-size:12px;   
@@ -1774,12 +1892,16 @@ dl.portlet ul.navTree li a:hover{
     padding: 6px;
 }
 .agentprofile-wrapper .agentportrait{
-    width:266px;   
+    width:260px;   
+}
+.agentprofile-wrapper .agentportrait .agent-avatar{
+    height: 260px !important;
+    position: absolute;
+    width: 260px !important;   
 }
 .agentprofile-wrapper .agentportrait .agent-avatar img{
-    height: 187px !important;
-    position: absolute;
-    width: 266px !important;   
+    height:100%;
+    width: 100%;
 }
 #content .agent-social li{
     display:inline-block;   
@@ -1811,11 +1933,96 @@ dl.portlet ul.navTree li a:hover{
 #content #content-core p{
     margin-bottom:1.5em;   
 }
+.titlecontact.toolkit h1{
+    display:none;   
+}
+.toggler_map_hide,
+.northernlowlands_hide ,
+.guanacaste_hide ,
+.nicoya_hide ,
+.centralpacific_hide ,
+.centralvalleyandhighlands_hide ,
+.caribbean_hide ,
+.southpacific_hide{
+    height: 332px;
+}
+.toggler_map_hide h2{
+    color: #000000;
+    font-family: 'rancho',cursive;
+    font-size: 22px;
+    font-weight: normal;
+    line-height: normal;
+    margin-left: 40px;
+    margin-top: -95px;
+    width: 190px;
+}
+.toggler_map_hide p{
+    color: #000000;
+    font-family: 'rancho',cursive;
+    font-size: 18px !important;
+    position: absolute;
+    right: 13%;
+    top: 4.5%;
+}
+.northernlowlands_hide h2,
+.guanacaste_hide h2,
+.nicoya_hide h2,
+.centralpacific_hide h2,
+.centralvalleyandhighlands_hide h2,
+.caribbean_hide h2,
+.southpacific_hide h2{
+    color: #000000;
+    font-family: 'rancho',cursive;
+    margin-left: 30px;
+    margin-top: -45px;
+    font-weight: normal;
+    line-height: normal;
+}
+#nav li a,
+#nav li.active a,
+#nav li.active a:hover{
+    height: 40px;
+}
+#nav li {
+    padding:0;   
+}
+.carousel.portletItem .agent-carousel .carousel-image{
+    text-align: center;   
+}
+.portletCarouselWrapper div.scrollable div.items div.itemPadding .agent-carousel .agent .agent-profilepage{
+    margin-top: 8px;
+    padding: 10px 0;
+    text-align: center;       
+}
+.Quicksearchbutton{
+    width:116px;
+    color:#ffffff !important;
+}
 @media (min-width: 1200px){
+    #form-buttons-search-advanced{
+        left: 78.5%;
+        top: 72.5%;
+    }
+    .Quicksearchbutton{
+        left: 74.5%;
+        bottom: 13%;
+    }
+    .footer{
+        background: url("krain/img/NEW_krain_footer_bg.png");
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-position:38%;
+    }
+    .column-0 .doormatSection .doormatSectionBody{
+        width: 25%;
+    }
+    #nav li.dropdown ul.dropdown-menu li a{   
+        height:auto;
+    }
     .agent-social{  
         float:left;
     }
-    #nav li.dropdown ul.dropdown-menu li a.hasDropDown{
+    #nav li.dropdown ul.dropdown-menu li a{
         border-bottom: 1px solid #cacaca;
     }
     #nav li.dropdown ul.dropdown-menu li ul.submenu li:last-of-type a{
@@ -1893,8 +2100,19 @@ dl.portlet ul.navTree li a:hover{
         width: 125%;
         background:none;
     }
-    .switch_button{
+    .switch_button,.global_switch_button
+    {
         left: 160%;
+        top: 1%;
+    }
+    .northernlowlandsback,
+    .guanacasteback,
+    .nicoyaback,
+    .centralpacificback,
+    .centralvalleyandHighlandsback,
+    .caribbeanback,
+    .southpacificback{
+        left: 88.5%;
         top: 1%;
     }
     .portletCarouselWrapper a.next{
@@ -1963,7 +2181,7 @@ dl.portlet ul.navTree li a:hover{
         width: 1080px;
     }
     #nav{
-        margin-left:192px;   
+        margin-left:193px;   
         float: left;
         width: 82%;
     }
@@ -2008,6 +2226,9 @@ dl.portlet ul.navTree li a:hover{
     .portletCarouselWrapper div.scrollable div.items div.itemPadding{
         padding: 9% 14%;        
     }
+    .portletCarouselWrapper div.scrollable div.items div.itemPadding .agent-carousel{
+        padding: 0 8%;        
+    }
     .formid-town-search div.formControls{
         float: left;
         margin: 23px 0 0;
@@ -2015,14 +2236,34 @@ dl.portlet ul.navTree li a:hover{
         margin-left:10px;
     }
     .portletCarouselWrapper a.prev{
-        left: 6%;
+        left: 9%;
     }
 }
 @media (min-width: 980px) and (max-width:1199px){ 
+    #form-buttons-search-advanced{
+        left: 75%;
+        top: 72.5%; 
+    }
+    .Quicksearchbutton{
+        left: 70.5%;
+        bottom: 13%;
+    }
+    .footer{
+        background: url("krain/img/NEW_krain_footer_bg.png");
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-position:35%;
+    }
+    #nav li.dropdown ul.dropdown-menu li a{   
+        height:auto;
+    }
+    .column-0 .doormatSection .doormatSectionBody{
+        width: 23%;
+    }
     .agent-social{  
         float:left;
     }
-    #nav li.dropdown ul.dropdown-menu li a.hasDropDown{
+    #nav li.dropdown ul.dropdown-menu li a{
         border-bottom: 1px solid #cacaca;
     }
      #nav li.dropdown ul.dropdown-menu li ul.submenu li:last-of-type a{
@@ -2102,15 +2343,25 @@ dl.portlet ul.navTree li a:hover{
     .site-de .form-row-listing-type .field span.option {
         width: 100%;
     }
-    .switch_button{
+    .switch_button,.global_switch_button{
         left: 159%;
         top: 1%;
     }
+    .northernlowlandsback,
+    .guanacasteback,
+    .nicoyaback,
+    .centralpacificback,
+    .centralvalleyandHighlandsback,
+    .caribbeanback,
+    .southpacificback{
+        left: 86.9%;
+        top: 1%;
+    }
     .portletCarouselWrapper a.next{
-        left: 81%;
+        left: 86.5%;
     }
     .portletCarouselWrapper a.prev{
-        left: 6%   
+        left: 10%;   
     }
     div#portal-column-two.width-1\:4{
         width:30%;   
@@ -2158,12 +2409,8 @@ dl.portlet ul.navTree li a:hover{
         margin-left: -33%;   
         height: 439px;
     }
-    .footer #doormat-container .column-0{
-        width:55%;   
-        height: 125px;
-    }
-    .footer #doormat-container .column-0 .doormatSection{
-        margin-top:4%;
+    .footer #doormat-container .column-0{  
+        height: auto;
     }
     .footer #doormat-container .column-1{
         width:45%;   
@@ -2221,10 +2468,13 @@ dl.portlet ul.navTree li a:hover{
         margin:0 auto;
     }
     .portletCarouselWrapper .scrollable .items .tileItem{
-        width:259px;  
+        width: 285px; 
     }
     .portletCarouselWrapper div.scrollable div.items div.itemPadding{
         padding: 0 13%;
+    }
+    .portletCarouselWrapper div.scrollable div.items div.itemPadding .agent-carousel{
+        padding: 0 4%;
     }
     .formid-town-search div.formControls{
         float: right;
@@ -2235,17 +2485,36 @@ dl.portlet ul.navTree li a:hover{
         height:280px; 
     }
 }
-@media (min-width: 768px) and (max-width: 979px) {    
+@media (min-width: 768px) and (max-width: 979px) {   
+    #form-buttons-search-advanced{
+        right: -5%;
+        top: 72.5%; 
+    }
+    .Quicksearchbutton{
+        right: -6%;
+        bottom: 13%;
+    }
+    .footer{
+        background: #ff0000;
+    }
+    #nav li.dropdown ul.dropdown-menu li{
+        float:none;   
+    }
+    .nav .dropdown .dropdown-menu{
+        display:none;   
+    }
+    .nav .dropdown.open .dropdown-menu{
+        display:block;   
+    }
+    .dropup, .dropdown{
+        position:static;   
+    }
     .agent-social {
         width: 62%;
         float:right;
     }
     #content .agent-social ul{
         margin-left: 0;
-    }
-    .nav-collapse #nav .dropdown-menu ul.submenu li:last-of-type,
-    #nav li.dropdown ul.dropdown-menu li:last-of-type{
-        border:0;   
     }
     .agentsearch-wrapper .agent{
         margin:30px 4% 0 0 ;
@@ -2260,15 +2529,19 @@ dl.portlet ul.navTree li a:hover{
     }
     #nav li.dropdown ul.dropdown-menu li{
         padding-top:7px;   
+        border:none; 
     }
     #nav li.dropdown ul.dropdown-menu li a{
+        border-bottom:1px solid #fff;   
+    }
+    #nav li.dropdown ul.dropdown-menu li a.hasDropDown{
         height: 25px;
         padding-left: 15px;
         padding-right: 0;
         text-align: left;   
-        border-bottom: 1px solid #fff;
+        border-bottom:1px solid #FFF;
     }
-    .nav-collapse #nav .dropdown-menu .submenu li a{
+    #nav li.dropdown ul.dropdown-menu li:last-of:type,.nav-collapse #nav .dropdown-menu .submenu li a:last-of-type{
         border:0;   
     }
     .agentprofile-wrapper .agentprofile{
@@ -2318,7 +2591,7 @@ dl.portlet ul.navTree li a:hover{
         width: 50%; 
     }
     .toggler_default #form-widgets-price_min{
-        margin-right: 11px;
+        margin-right: 30px;
         width: 70%;
     }
     .toggler_default #form-widgets-price_max{
@@ -2357,8 +2630,14 @@ dl.portlet ul.navTree li a:hover{
     .content .formid-town-search #fg-base-edit{
         padding:0;   
     }
-    .switch_button{
-        left: 159%;
+    .northernlowlandsback,
+    .guanacasteback,
+    .nicoyaback,
+    .centralpacificback,
+    .centralvalleyandHighlandsback,
+    .caribbeanback,
+    .southpacificback{
+        left: 87%;
         top: 1%;
     }
     .portletCarouselWrapper a.next{
@@ -2463,16 +2742,21 @@ dl.portlet ul.navTree li a:hover{
         float:none;
     }
     div.width-9{
-        width:60%;   
+        width: 100%;   
     }
     div.width-7{
-        width: 35%;   
+        width: 100%;  
     }
     .width-9.position-0 {
         margin-left: -100%;   
     }
     .width-7.position-9 {
-        margin-left:-35%;   
+        margin-left: -100%;
+        margin-top: 360px;   
+    }
+    .switch_button,.global_switch_button{
+        left: 93%;
+        top: 111%;
     }
     .titlecontact.toolkit h1{
         width:51%;   
@@ -2481,7 +2765,7 @@ dl.portlet ul.navTree li a:hover{
         width:99%;   
     }
     .portletCarouselWrapper .scrollable .items .tileItem{
-        width: 364px; 
+        width: 320px; 
     }
     .portletCarouselWrapper div.scrollable div.items div.itemPadding{
         padding: 0 20%;
@@ -2497,6 +2781,35 @@ dl.portlet ul.navTree li a:hover{
     }
 }
 @media (min-width: 600px) and (max-width: 767px){
+    #form-buttons-search-advanced{
+        right: -47px;
+        top: 72.5%; 
+    }
+    .Quicksearchbutton{
+        right: -48px;
+        bottom: 13%;
+    }
+    .footer{
+        background: #ff0000;
+    }
+    #nav li.dropdown ul.dropdown-menu li{
+        float:none;   
+    }
+    .nav .dropdown .dropdown-menu{
+        display:none;   
+    }
+    .nav .dropdown.open .dropdown-menu{
+        display:block;   
+    }
+    .dropup, .dropdown{
+        position:static;   
+    }
+    #nav li.dropdown ul.dropdown-menu li{
+        border:none;   
+    }
+    #nav li.dropdown ul.dropdown-menu li a{
+        border-bottom:1px solid #FFFFFF;   
+    }
     .agent-social{  
         float:left;
     }
@@ -2524,9 +2837,6 @@ dl.portlet ul.navTree li a:hover{
         padding-right: 0;
         text-align: left;   
         border-bottom: 1px solid #fff;
-    }
-    .nav-collapse #nav .dropdown-menu .submenu li a{
-        border:0;   
     }
     .agentprofile-wrapper .agentportrait{
         margin-bottom:4%;        
@@ -2625,9 +2935,19 @@ dl.portlet ul.navTree li a:hover{
     .content .formid-town-search #fg-base-edit{
         padding:0;   
     }
-    .switch_button{
+    .switch_button,.global_switch_button{
         left: 93%;
         top: 111%;
+    }
+    .northernlowlandsback,
+    .guanacasteback,
+    .nicoyaback,
+    .centralpacificback,
+    .centralvalleyandHighlandsback,
+    .caribbeanback,
+    .southpacificback{
+        left: 93%;
+        top: 2.1%;
     }
     .portletCarouselWrapper a.next{
         left: 94%;
@@ -2707,7 +3027,7 @@ dl.portlet ul.navTree li a:hover{
     }
     #portal-column-content #listing-info {
         width: 100%;
-        margin-top: 360px;
+        margin-top: 450px;
     }
     #portal-column-content.width-3\:4 .listing #listing-images{
         padding: 1%;   
@@ -2771,6 +3091,39 @@ dl.portlet ul.navTree li a:hover{
     }
 }
 @media (min-width: 481px) and (max-width: 599px){
+    #form-buttons-search-advanced{
+        right: -47px;
+        top: 72.5%; 
+    }
+    .Quicksearchbutton{
+        right: -48px;
+        bottom: 13%;
+    }
+    #form-buttons-search-advanced{
+        right: -47px;
+        top: 75.5%; 
+    }
+    .footer{
+        background: #ff0000;
+    }
+    #nav li.dropdown ul.dropdown-menu li{
+        float:none;   
+    }
+    .nav .dropdown .dropdown-menu{
+        display:none;   
+    }
+    .nav .dropdown.open .dropdown-menu{
+        display:block;   
+    }
+    .dropup, .dropdown{
+        position:static;   
+    }
+    #nav li.dropdown ul.dropdown-menu li{
+        border:none;   
+    }
+    #nav li.dropdown ul.dropdown-menu li a{
+        border-bottom:1px solid #FFFFFF;   
+    }
     .agent-social {
         width: 62%;
         float:right;
@@ -2792,6 +3145,12 @@ dl.portlet ul.navTree li a:hover{
     ul#nav{
         padding:10px;   
         width: auto;
+        background:#000;
+        border-top: 1px solid #FFFFFF;
+        border-bottom: 1px solid #FFFFFF;
+    }
+    #fullbgnav{
+        background:#000 !important;   
     }
     #nav li.dropdown ul.dropdown-menu li{
         padding-top:7px;   
@@ -2802,9 +3161,6 @@ dl.portlet ul.navTree li a:hover{
         padding-right: 0;
         text-align: left;   
         border-bottom: 1px solid #fff;
-    }
-    .nav-collapse #nav .dropdown-menu .submenu li a{
-        border:0;   
     }
     .agentprofile-wrapper .agentportrait{
         margin-bottom:4%;        
@@ -2822,14 +3178,15 @@ dl.portlet ul.navTree li a:hover{
         text-align:center;   
     }
     .nav-collapse, .nav-collapse.collapse{
+        background: #000000 !important;
         position: absolute;
         right: 0%;
-        top: 100%;
-        z-index: 101;   
+        top: 155%;
+        z-index: 101;  
+        width: 100%;
     }
     .nav-collapse #nav li{
         display:block;
-        border-bottom:1px solid #fff;
     }
     .nav-collapse #nav li a,.nav-collapse #nav li a:hover{
         border:0;
@@ -2839,6 +3196,7 @@ dl.portlet ul.navTree li a:hover{
         max-width: none;
         min-width: 0;
         padding: 0 4px;
+        background:none transparent;
     }
     .portletStaticText img {
         width:auto;
@@ -2893,9 +3251,19 @@ dl.portlet ul.navTree li a:hover{
     .content .formid-town-search #fg-base-edit{
         padding:0;   
     }
-    .switch_button{
+    .switch_button,.global_switch_button{
         left: 90%;
         top: 110%;
+    }
+    .northernlowlandsback,
+    .guanacasteback,
+    .nicoyaback,
+    .centralpacificback,
+    .centralvalleyandHighlandsback,
+    .caribbeanback,
+    .southpacificback{
+        left: 90%;
+        top: 1.5%;
     }
     .portletCarouselWrapper a.next{
         left: 93%;
@@ -2981,7 +3349,7 @@ dl.portlet ul.navTree li a:hover{
     }
     #portal-column-content #listing-info {
         width: 100%;
-        margin-top: 350px;
+        margin-top: 435px;
     }
     #portal-column-content.width-3\:4 .listing #listing-images{
         padding: 1%;   
@@ -3051,10 +3419,128 @@ dl.portlet ul.navTree li a:hover{
         height:245px; 
     }
     #portal-logo{
+        margin-top: 0;
+        top: 0; 
+        bottom: -135px;
+    }
+    #secondary-nav,
+    #tri-nav{
+        display:block !important; 
+        float: right;
+        margin-top: 9px;
+        margin-right: 5px;
+    }
+    #tri-nav:hover li a{
+        width:45px;   
+    }
+    #secondary-nav li a,
+    #tri-nav li{
+        margin-top:2px;
+    /* IE10 Consumer Preview */ 
+        background-image: -ms-linear-gradient(top, #4f4f4f 0%, #000000 100%);
+        /* Mozilla Firefox */ 
+        background-image: -moz-linear-gradient(top, #4f4f4f 0%, #000000 100%);
+        /* Opera */ 
+        background-image: -o-linear-gradient(top, #4f4f4f 0%, #000000 100%);
+        /* Webkit (Safari/Chrome 10) */ 
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #4f4f4f), color-stop(1, #000000));
+        /* Webkit (Chrome 11+) */ 
+        background-image: -webkit-linear-gradient(top, #4f4f4f 0%, #000000 100%);
+        /* W3C Markup, IE10 Release Preview */ 
+        background-image: linear-gradient(to bottom, #4f4f4f 0%, #000000 100%);
+    }
+    #secondary-nav li a,#secondary-nav li.active a,#secondary-nav  li.active a:hover,
+    #tri-nav li a,#tri-nav  li.active a,#tri-nav  li.active a:hover{
+        color:#fff;
+    }
+    .navbar .btn-navbar{
+        margin-right:25px;   
+    }
+    .navbar .btn-navbar .icon-bar{
+        height: 5px;
+        width: 30px;   
+    }
+    #portal-personaltools-wrapper,#portal-languageselector,.socialheader{
         display:none;   
+    }
+    #navibar{
+        margin-bottom: 20px;    
+    } 
+    .nav-collapse .nav li a:hover{
+        background:none; 
+    }
+    #tri-nav li {
+        display:none;   
+    }
+    #tri-nav:hover li{
+        display:block;  
+    }
+    #tri-nav li.currentLanguage{
+        display:block;
+    }
+    #fullbgnav{
+        background:#000 !important;   
+    }
+    .navbar #nav .active,#nav li.active a{
+        /* IE10 Consumer Preview */ 
+        background-image: -ms-linear-gradient(top, #FF3210 0%, #630807 100%);       
+        /* Mozilla Firefox */ 
+        background-image: -moz-linear-gradient(top, #FF3210 0%, #630807 100%);       
+        /* Opera */ 
+        background-image: -o-linear-gradient(top, #FF3210 0%, #630807 100%);        
+        /* Webkit (Safari/Chrome 10) */ 
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FF3210), color-stop(1, #630807));       
+        /* Webkit (Chrome 11+) */ 
+        background-image: -webkit-linear-gradient(top, #FF3210 0%, #630807 100%);
+        /* W3C Markup, IE10 Release Preview */ 
+        background-image: linear-gradient(to bottom, #FF3210 0%, #630807 100%);
     }
 }
 @media (max-width: 480px){
+    #form-buttons-search-advanced{
+        right: -47px;
+        top: 72.5%; 
+    }
+    .Quicksearchbutton{
+        right: -48px;
+        bottom: 13%;
+    }
+    .footer{
+        background: #ff0000;
+    }
+    .nav-collapse .nav li a:hover{
+        background:none; 
+    }
+    #tri-nav li {
+        display:none;   
+    }
+    #tri-nav:hover li{
+        display:block;  
+    }
+    #tri-nav li.currentLanguage{
+        display:block;
+    }
+    #fullbgnav{
+        background:#000 !important;   
+    }
+    #nav li.dropdown ul.dropdown-menu li{
+        float:none;   
+    }
+    .nav .dropdown .dropdown-menu{
+        display:none;   
+    }
+    .nav .dropdown.open .dropdown-menu{
+        display:block;   
+    }
+    .dropup, .dropdown{
+        position:static;   
+    }
+    #nav li.dropdown ul.dropdown-menu li{
+        border:none;   
+    }
+    #nav li.dropdown ul.dropdown-menu li a{
+        border-bottom:1px solid #FFFFFF;   
+    }
     .agent-social{
         float:left;   
     }
@@ -3075,6 +3561,9 @@ dl.portlet ul.navTree li a:hover{
     ul#nav{
         padding:10px;   
         width: auto;
+        background:#000;
+        border-top:1px solid #fff;
+        border-bottom:1px solid #fff;
     }
     #nav li.dropdown ul.dropdown-menu li{
         padding-top:7px;   
@@ -3085,9 +3574,6 @@ dl.portlet ul.navTree li a:hover{
         padding-right: 0;
         text-align: left;   
         border-bottom: 1px solid #fff;
-    }
-    .nav-collapse #nav .dropdown-menu .submenu li a{
-        border:0;   
     }
     .agentprofile-wrapper .agentportrait{
         margin-bottom:4%;        
@@ -3105,14 +3591,15 @@ dl.portlet ul.navTree li a:hover{
         text-align:center;   
     }
     .nav-collapse, .nav-collapse.collapse{
+        background: none repeat scroll 0 0 #000000 !important;
         position: absolute;
-        right: 0%;
-        top: 100%;
-        z-index: 101;   
+        right: 0;
+        top: 155%;
+        width: 100%;
+        z-index: 101; 
     }
     .nav-collapse #nav li{
         display:block;
-        border-bottom:1px solid #fff;
     }
     .nav-collapse #nav li a,.nav-collapse #nav li a:hover{
         border:0;
@@ -3122,6 +3609,7 @@ dl.portlet ul.navTree li a:hover{
         max-width: none;
         min-width: 0;
         padding: 0 4px;
+        background:none;
     }
     .portletStaticText img {
         width:auto;
@@ -3182,9 +3670,19 @@ dl.portlet ul.navTree li a:hover{
     .content .formid-town-search #fg-base-edit{
         padding:0;   
     }
-    .switch_button{
+    .switch_button,.global_switch_button{
         left: 88%;
         top: 110%;
+    }
+    .northernlowlandsback,
+    .guanacasteback,
+    .nicoyaback,
+    .centralpacificback,
+    .centralvalleyandHighlandsback,
+    .caribbeanback,
+    .southpacificback{
+        left: 88%;
+        top: 1.5%;
     }
     .portletCarouselWrapper a.next{
         left: 93%;
@@ -3270,7 +3768,7 @@ dl.portlet ul.navTree li a:hover{
     }
     #portal-column-content #listing-info {
         width: 100%;
-        margin-top: 350px;
+        margin-top: 430px;
     }
     #portal-column-content.width-3\:4 .listing #listing-images{
         padding: 1%;   
@@ -3325,6 +3823,7 @@ dl.portlet ul.navTree li a:hover{
     }
     .titlecontact.toolkit .toolkit.viewlet.plugin{
         width:97%;  
+        color:#000; 
     }
     .portletCarouselWrapper .scrollable .items .tileItem{
         width:315px; 
@@ -3340,9 +3839,68 @@ dl.portlet ul.navTree li a:hover{
         height:245px; 
     }
     #portal-logo{
-        display:none;   
+        bottom: -135px;
+        margin-top: 0;
+        top: 0;  
     }
     .site-de .form-row-listing-type .field span.option {
         width: 100%;
+    }
+    #secondary-nav,
+    #tri-nav{
+        display:block !important; 
+        float: right;
+        margin-top: 9px;
+        margin-right: 5px;
+    }
+    #tri-nav:hover li a{
+        width:45px;   
+    }
+    #secondary-nav li a,
+    #tri-nav li{
+        margin-top:2px;
+    /* IE10 Consumer Preview */ 
+        background-image: -ms-linear-gradient(top, #4f4f4f 0%, #000000 100%);
+        /* Mozilla Firefox */ 
+        background-image: -moz-linear-gradient(top, #4f4f4f 0%, #000000 100%);
+        /* Opera */ 
+        background-image: -o-linear-gradient(top, #4f4f4f 0%, #000000 100%);
+        /* Webkit (Safari/Chrome 10) */ 
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #4f4f4f), color-stop(1, #000000));
+        /* Webkit (Chrome 11+) */ 
+        background-image: -webkit-linear-gradient(top, #4f4f4f 0%, #000000 100%);
+        /* W3C Markup, IE10 Release Preview */ 
+        background-image: linear-gradient(to bottom, #4f4f4f 0%, #000000 100%);
+    }
+    #secondary-nav li a,#secondary-nav li.active a,#secondary-nav  li.active a:hover,
+    #tri-nav li a,#tri-nav  li.active a,#tri-nav  li.active a:hover{
+        color:#fff;
+    }
+    .navbar .btn-navbar{
+        margin-right:25px;   
+    }
+    .navbar .btn-navbar .icon-bar{
+        height: 5px;
+        width: 30px;   
+    }
+    #portal-personaltools-wrapper,#portal-languageselector,.socialheader{
+        display:none;   
+    }
+    #navibar{
+        margin-bottom: 20px;    
+    }     
+    .navbar #nav .active,#nav li.active a{
+        /* IE10 Consumer Preview */ 
+        background-image: -ms-linear-gradient(top, #FF3210 0%, #630807 100%);       
+        /* Mozilla Firefox */ 
+        background-image: -moz-linear-gradient(top, #FF3210 0%, #630807 100%);       
+        /* Opera */ 
+        background-image: -o-linear-gradient(top, #FF3210 0%, #630807 100%);        
+        /* Webkit (Safari/Chrome 10) */ 
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FF3210), color-stop(1, #630807));       
+        /* Webkit (Chrome 11+) */ 
+        background-image: -webkit-linear-gradient(top, #FF3210 0%, #630807 100%);
+        /* W3C Markup, IE10 Release Preview */ 
+        background-image: linear-gradient(to bottom, #FF3210 0%, #630807 100%);
     }
 }

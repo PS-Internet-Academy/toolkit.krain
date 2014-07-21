@@ -90,7 +90,6 @@ body{
     display: table-cell;
     line-height: normal;
     vertical-align: middle;
-    width: 100%;
 }
 #content .content_box img{
     float:left;  
@@ -151,12 +150,6 @@ body{
 .form-row-tabbed dd.formPanel{
     margin:0;
     padding:0;
-}
-.galleria-container img {
-    left: 0 !important;
-    top:0 !important;
-    width:170px !important;
-    position:static !important; 
 }
 .galleria-info{
     position:static;   
@@ -479,6 +472,9 @@ div.width-full{
     left:0;
     margin:0;
 }
+.galleria-container img{
+    top: 32px;
+}
 @media (min-width: 1200px){
     #portal-columns,#header .row,.footer .row,.colophonWrapper{
         width:1080px;   
@@ -515,10 +511,6 @@ div.width-full{
     .galleria-container .galleria-stage .galleria-image {
         width: 100% !important;
         height:400px !important;
-    }
-    .galleria-container img {
-        left: 0 !important;
-        width: 100% !important;
     }
     .galleria-container {
         width: 100% !important;
@@ -654,10 +646,6 @@ div.width-full{
     .galleria-container .galleria-stage .galleria-image {
         width: 100% !important;
     }
-    .galleria-container img {
-        left: 0 !important;
-        width: 100% !important;
-    }
     select {
         width: 49%;
     }
@@ -738,10 +726,6 @@ div.width-full{
         width: 100%;
     }
     .galleria-container .galleria-stage .galleria-image {
-        width: 100% !important;
-    }
-    .galleria-container img {
-        left: 0 !important;
         width: 100% !important;
     }
     .galleria-container {
@@ -852,10 +836,6 @@ div.width-full{
         width: 100%;
     }
     .galleria-container .galleria-stage .galleria-image {
-        width: 100% !important;
-    }
-    .galleria-container img {
-        left: 0 !important;
         width: 100% !important;
     }
     .galleria-container {
@@ -970,10 +950,6 @@ div.width-full{
     .galleria-container .galleria-stage .galleria-image {
         width: 100% !important;
     }
-    .galleria-container img {
-        left: 0 !important;
-        width: 100% !important;
-    }
     .galleria-container {
         width: 100% !important;
         height: 400px;
@@ -1084,10 +1060,6 @@ div.width-full{
         width: 100%;
     }
     .galleria-container .galleria-stage .galleria-image {
-        width: 100% !important;
-    }
-    .galleria-container img {
-        left: 0 !important;
         width: 100% !important;
     }
     .galleria-container {

@@ -41,6 +41,9 @@
       <script type="text/javascript" src="krain/cover-toggler.js" ></script>
       <script type="text/javascript" src="krain/featured-type.js" ></script>
       <script type="text/javascript" src="krain/move-featured-listing.js" ></script>
+      <script type="text/javascript" src="krain/preloadjs-0.4.1.min.js" ></script>
+      <script type="text/javascript" src="krain/advanced-porletssearch.js" ></script>
+      
       <link href='http://fonts.googleapis.com/css?family=Duru+Sans|PT+Serif+Caption|Montaga|Rancho|Roboto' rel='stylesheet' type='text/css'>
       <!-- end CSS-->
 
@@ -53,7 +56,7 @@
 
       </head>
 
-      <body>   
+      <body onload="init()">   
       <div id="globalwrapper">
          <div id="container" class="container">
          <div id="box">
@@ -84,6 +87,20 @@
                      </li>
                      <li><a href="#contact">Contact</a></li>
                   </ul>
+                  <ul id="tri-nav" class="nav pull-right">
+                      
+                  </ul>
+                  <ul id="secondary-nav" class="nav pull-right">
+                     <li class="dropdown" data-dropdown="dropdown">
+                     <a class="dropdown-toggle" href="#">
+                        <span id="personaltool-menuheader">User</span>
+                        <b class="caret"></b></a>
+                     <ul class="dropdown-menu" id="personaltool-menu">
+                        <li><a href="#">Logout</a></li>
+                     </ul>
+                     </li>
+                  </ul>
+                  
                </div>
                </div>
             </div>
@@ -185,6 +202,201 @@
                 }
                 catch(err){console.log(err);}
             </script>
+        
+            <script type="text/javascript">
+                function init() {
+                    if($(".toggler_map_hide").length <1){return false;}
+                
+                manifest = [
+                    
+                "http://kraincostarica.com/en/image/image-map/0-country-map.png",
+                "http://kraincostarica.com/en/image/image-map/2-guanacaste.png",
+                "http://kraincostarica.com/en/image/image-map/7-south-pacific.png",
+                "http://kraincostarica.com/en/image/image-map/6-caribbean.png",
+                "http://kraincostarica.com/en/image/image-map/5-central-pacific.png",
+                "http://kraincostarica.com/en/image/image-map/4-central-valley.png",
+                "http://kraincostarica.com/en/image/image-map/3-northern-lowlands.png",    
+                "http://kraincostarica.com/en/image/image-map/1-nicoya.png",
+            ];
+            
+            // Create a preloader. There is no manifest added to it up-front, we will add items on-demand.
+            preload = new createjs.LoadQueue(true,""); //change "" to add base path
+            
+            //show progress
+            var $mainProgress = $("#mainProgress"),
+                $progressBar = $mainProgress.find('.progress');
+            $progressBar.width(0);
+            preload.addEventListener("progress", function()
+            {
+                   console.log('Updating preloading progress...'+Math.round(preload.progress*100)+"%");
+                   $progressBar.width(preload.progress * $mainProgress.width());
+            });
+            
+            //complete callback
+            preload.addEventListener("complete", function()
+            {
+                console.log('ASSETS PRELOADED...');
+            });
+            
+            preload.setMaxConnections(5);
+            preload.loadManifest(manifest);
+                     
+                     }      
+            </script>  
+        
+            <script type="text/javascript">
+                $(".toggler_map_hide").mouseover(function init() {
+                    if($(".toggler_map_hide").length <1){return false;}
+                
+                manifest = [
+                    
+                "http://kraincostarica.com/en/image/image-map/1-18-santa-cruz-guanacaste.png",
+                "http://kraincostarica.com/en/image/image-map/1-17-lagarto-guanacaste.png",
+                "http://kraincostarica.com/en/image/image-map/1-16-playa-junquillal-guanacaste.png",
+                "http://kraincostarica.com/en/image/image-map/1-15-playa-avellana-guanacaste.png",
+                "http://kraincostarica.com/en/image/image-map/1-14-playa-langosta-guanacaste.png",
+                "http://kraincostarica.com/en/image/image-map/1-13-villareal-guanacaste.png",
+                "http://kraincostarica.com/en/image/image-map/1-11-playa-grande-guanacaste.png",
+                "http://kraincostarica.com/en/image/image-map/1-12-tamarindo-guanacaste.png",
+                "http://kraincostarica.com/en/image/image-map/1-10-playa-conchal-guanacaste.png",
+                "http://kraincostarica.com/en/image/image-map/1-9-brasilito-guanacaste.png",
+                "http://kraincostarica.com/en/image/image-map/1-8-playa-flamingo-guanacaste.png",
+                "http://kraincostarica.com/en/image/image-map/1-7-playa-potrero-guanacaste.png",
+                "http://kraincostarica.com/en/image/image-map/1-6-las-catalinas-guanacaste.png",
+                "http://kraincostarica.com/en/image/image-map/1-19-huacas-guanacaste.png",
+                "http://kraincostarica.com/en/image/image-map/1-5-playa-ocotal-guanacaste.png",
+                "http://kraincostarica.com/en/image/image-map/1-4-playa-del-coco-guanacaste.png",
+                "http://kraincostarica.com/en/image/image-map/1-3-playa-hermosa-guanacaste.png",
+                "http://kraincostarica.com/en/image/image-map/1-2-playa-panama-guanacaste.png",
+                "http://kraincostarica.com/en/image/image-map/1-1-papagayo-guanacaste.png",
+                "http://kraincostarica.com/en/image/image-map/guanacaste-base-image.png",
+                "http://kraincostarica.com/en/image/image-map/1-26-canas-guanacaste.png",
+                "http://kraincostarica.com/en/image/image-map/1-25-bagaces-guanacaste.png",
+                "http://kraincostarica.com/en/image/image-map/1-23-liberia-guanacaste.png",
+                "http://kraincostarica.com/en/image/image-map/1-24-upala-guanacaste.png",
+                "http://kraincostarica.com/en/image/image-map/1-22-sardinal-guanacaste.png",
+                "http://kraincostarica.com/en/image/image-map/1-21-filadelfia-guanacaste.png",
+                "http://kraincostarica.com/en/image/image-map/1-20-belen-guanacaste.png",
+            
+                "http://kraincostarica.com/en/image/image-map/15-nicoya-cobano.png",
+                "http://kraincostarica.com/en/image/image-map/16-nicoya-nicoya.png",
+                "http://kraincostarica.com/en/image/image-map/14-nicoya-hojancha.png",
+                "http://kraincostarica.com/en/image/image-map/13-nicoya-lepanto-y-jicaral.png",
+                "http://kraincostarica.com/en/image/image-map/12-nicoya-paquera-y-playa-naranjo.png",
+                "http://kraincostarica.com/en/image/image-map/11-nicoya-tambor.png",
+                "http://kraincostarica.com/en/image/image-map/9-nicoya-playa-malpais.png",
+                "http://kraincostarica.com/en/image/image-map/10-nicoya-montezuma.png",
+                "http://kraincostarica.com/en/image/image-map/8-nicoya-santa-teresa.png",
+                "http://kraincostarica.com/en/image/image-map/7-nicoya-playa-bongo-playa-manzanillo.png",
+                "http://kraincostarica.com/en/image/image-map/6-nicoya-playa-bejuco-playa-san-miguel-playa.png",
+                "http://kraincostarica.com/en/image/image-map/5-nicoya-punta-islita.png",
+                "http://kraincostarica.com/en/image/image-map/4-nicoya-samara.png",
+                "http://kraincostarica.com/en/image/image-map/3-nicoya-playa-garza-y-barco-quebrado.png",
+                "http://kraincostarica.com/en/image/image-map/2-nicoya-playa-guiones-and-playa-pelada.png",
+                "http://kraincostarica.com/en/image/image-map/1-nicoya-nosara.png",
+                "http://kraincostarica.com/en/image/image-map/8-northern-quesada.png",
+                
+                "http://kraincostarica.com/en/image/image-map/northern-lowlands-pins.png",
+                "http://kraincostarica.com/en/image/image-map/7-northern-florencia.png",
+                "http://kraincostarica.com/en/image/image-map/6-northern-aguas-zarcas.png",
+                "http://kraincostarica.com/en/image/image-map/5-northern-pital.png",
+                "http://kraincostarica.com/en/image/image-map/4-northern-los-chiles.png",
+                "http://kraincostarica.com/en/image/image-map/3-northern-tilaran-and-tronadora.png",
+                "http://kraincostarica.com/en/image/image-map/1-northern-arenal-and-la-fortuna.png",
+                "http://kraincostarica.com/en/image/image-map/2-northern-monteverde-santa-elena.png",
+                
+                "http://kraincostarica.com/en/image/image-map/23-central-valley-san-diego.png",
+                "http://kraincostarica.com/en/image/image-map/22-central-valley-tres-rios.png",
+                "http://kraincostarica.com/en/image/image-map/21-central-valley-zarcero.png",
+                "http://kraincostarica.com/en/image/image-map/central-valley-pins.png",
+                "http://kraincostarica.com/en/image/image-map/20-central-valley-guapiles.png",
+                "http://kraincostarica.com/en/image/image-map/19-central-valley-orosi.png",
+                "http://kraincostarica.com/en/image/image-map/18-central-valley-paraiso.png",
+                "http://kraincostarica.com/en/image/image-map/17-central-valley-turrialba.png",
+                "http://kraincostarica.com/en/image/image-map/16-central-valley-cartago.png",
+                "http://kraincostarica.com/en/image/image-map/15-central-valley-san-jose.png",
+                "http://kraincostarica.com/en/image/image-map/14-central-valley-aserri.png",
+                "http://kraincostarica.com/en/image/image-map/11-central-valley-puriscal.png",
+                "http://kraincostarica.com/en/image/image-map/13-central-valley-colon.png",
+                "http://kraincostarica.com/en/image/image-map/12-central-valley-santa-ana.png",
+                "http://kraincostarica.com/en/image/image-map/10-central-valley-turrubares.png",
+                "http://kraincostarica.com/en/image/image-map/9-central-valley-escazu.png",
+                "http://kraincostarica.com/en/image/image-map/8-central-valley-heredia.png",
+                "http://kraincostarica.com/en/image/image-map/7-central-valley-sarchi.png",
+                "http://kraincostarica.com/en/image/image-map/6-central-valley-naranjo.png",
+                "http://kraincostarica.com/en/image/image-map/5-central-valley-ototina-and-san-mateo.png",
+                "http://kraincostarica.com/en/image/image-map/4-central-valley-atenas.png",
+                "http://kraincostarica.com/en/image/image-map/3-central-valley-palmares.png",
+                "http://kraincostarica.com/en/image/image-map/2-central-valley-grecia.png",
+                "http://kraincostarica.com/en/image/image-map/1-central-valley-alajuela.png",
+                
+                "http://kraincostarica.com/en/image/image-map/11-central-pacific-tarcoles.png",
+                "http://kraincostarica.com/en/image/image-map/1-central-pacific-puntarenas.png",
+                "http://kraincostarica.com/en/image/image-map/central-pacific-pins.png",
+                "http://kraincostarica.com/en/image/image-map/4-central-pacific-jaco.png",
+                "http://kraincostarica.com/en/image/image-map/10-central-pacific-postora-and-rey.png",
+                "http://kraincostarica.com/en/image/image-map/8-central-pacific-quepos.png",
+                "http://kraincostarica.com/en/image/image-map/2-central-pacific-caldera.png",
+                "http://kraincostarica.com/en/image/image-map/5-central-pacific-playa-hermosa.png",
+                "http://kraincostarica.com/en/image/image-map/9-central-pacific-manuel-antonio.png",
+                "http://kraincostarica.com/en/image/image-map/7-central-pacific-parrita.png",
+                "http://kraincostarica.com/en/image/image-map/6-central-pacific-esterillos.png",
+                "http://kraincostarica.com/en/image/image-map/3-central-pacific-playa-herradura.png",
+                
+                "http://kraincostarica.com/en/image/image-map/caribbean-pins.png",
+                "http://kraincostarica.com/en/image/image-map/8-caribbean-playa-manzanillo.png",
+                "http://kraincostarica.com/en/image/image-map/7-caribbean-punta-uva.png",
+                "http://kraincostarica.com/en/image/image-map/6-caribbean-puerto-viejo.png",
+                "http://kraincostarica.com/en/image/image-map/5-caribbean-cahuita.png",
+                "http://kraincostarica.com/en/image/image-map/3-caribbean-siquirres.png",
+                "http://kraincostarica.com/en/image/image-map/4-caribbean-limon.png",
+                "http://kraincostarica.com/en/image/image-map/2-caribbean-batan.png",
+                "http://kraincostarica.com/en/image/image-map/1-caribbean-marina.png",
+                
+                "http://kraincostarica.com/en/image/image-map/south-pacific-pins.png",
+                "http://kraincostarica.com/en/image/image-map/16-south-pacific-golfito.png",
+                "http://kraincostarica.com/en/image/image-map/15-south-pacific-puerto-jimenez.png",
+                "http://kraincostarica.com/en/image/image-map/14-south-pacific-drake-bay.png",
+                "http://kraincostarica.com/en/image/image-map/13-south-pacific-sierpe.png",
+                "http://kraincostarica.com/en/image/image-map/10-south-pacific-playa-ballena-ventana-tortuga.png",
+                "http://kraincostarica.com/en/image/image-map/9-south-pacific-playa-uvita.png",
+                "http://kraincostarica.com/en/image/image-map/1-south-pacific-ciudad-neily.png",
+                "http://kraincostarica.com/en/image/image-map/7-south-pacific-san-isidro-de-el-general.png",
+                "http://kraincostarica.com/en/image/image-map/6-south-pacific-buenos-aires.png",
+                "http://kraincostarica.com/en/image/image-map/5-south-pacific-potrero-grande.png",
+                "http://kraincostarica.com/en/image/image-map/11-south-pacific-ojochal.png",
+                "http://kraincostarica.com/en/image/image-map/4-south-pacific-pejibaye.png",
+                "http://kraincostarica.com/en/image/image-map/3-south-pacific-san-vito.png",
+                "http://kraincostarica.com/en/image/image-map/2-south-pacific-paso-canoas.png",
+                "http://kraincostarica.com/en/image/image-map/8-south-pacific-playa-dominical.png",
+                "http://kraincostarica.com/en/image/image-map/12-south-pacific-palmar-sur.png"
+                
+            ];
+            
+            // Create a preloader. There is no manifest added to it up-front, we will add items on-demand.
+            preload = new createjs.LoadQueue(true,""); //change "" to add base path
+            
+            //show progress
+            var $mainProgress = $("#mainProgress"),
+                $progressBar = $mainProgress.find('.progress');
+            $progressBar.width(0);
+            preload.addEventListener("progress", function()
+            {
+                   console.log('Updating preloading progress...'+Math.round(preload.progress*100)+"%");
+                   $progressBar.width(preload.progress * $mainProgress.width());
+            });
+            
+            //complete callback
+            preload.addEventListener("complete", function()
+            {
+                console.log('ASSETS PRELOADED...');
+            });
+            
+            preload.setMaxConnections(5);
+            preload.loadManifest(manifest);
+                     
+                     });         
+            </script>        
         
             <script defer src="js/plugins.js"></script>
             <script defer src="js/script.js"></script>
